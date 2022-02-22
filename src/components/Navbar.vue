@@ -1,12 +1,12 @@
 <template>
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class=" flex flex-wrap justify-between items-center mx-auto">
             <a href="#" class="flex">
                 <router-link to="/">
                     <img class="mr-3 h-10" src="../../public/virus.png" alt="bacteria" />
                 </router-link>
                 <span
-                    class="self-center text-lg font-semibold whitespace-nowrap dark:text-white"
+                    class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white "
                 >Covid Tracker</span>
                 <router-link to="/about">
                     <img class="ml-3 h-10" src="../../public/prismaticos.png" alt="prismaticos" />

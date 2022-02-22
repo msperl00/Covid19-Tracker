@@ -13,7 +13,7 @@ import ButtonRepo from '@/components/ButtonRepo.vue'
         <br />
       </h2>
       <!-- flex-shrink-0 and mt-0 -->
-      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0 md:mt-0 md:flex-shrink-0">
+      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
           <router-link
             to="/trackerDetails"
