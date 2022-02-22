@@ -11,8 +11,9 @@ import ButtonRepo from '@/components/ButtonRepo.vue'
         class="text-3xl font-extrabold  leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
       >
       <i class="fa fa-viruses mr-3 h-10 mb-3"></i>
-        Docs Api 
-        <p class="text-lg font-light ">Api by <a class="text-indigo-500" href="https://disease.sh/">covid19Api</a></p>
+        Documentation
+        
+        <p class="text-lg font-light ml-16">Api by <a class="text-indigo-500" href="https://disease.sh/">covid19Api</a></p>
       </h2>
       <div id="BackHome" class="mt-8 flex lg:mt-0 lg:flex-shrink-0 ">
         <div class="inline-flex rounded-md shadow">

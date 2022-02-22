@@ -1,6 +1,6 @@
 <template>
   
-  <div>
+  
     <div
       class="mx-auto max-w-screen-xl  sm:px-4 lg:flex lg:justify-between md:flex md:justify-between lg:py-6 lg:px-8 md:py-6 md:px-8"
     >
@@ -18,18 +18,17 @@
             >Go back</router-link
           >
         </div>
-        <ButtonRepo />
       </div>
     </div>
-  </div>
-</template>
+  <Tracker />
 
+</template>
 <script>
+import Tracker from '../components/Tracker.vue'
+
 export default {
     name: 'GlobalDetails',
-    setup(){
-
-    }
+    components: {Tracker},
 
 }
 </script>
