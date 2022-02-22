@@ -12,7 +12,6 @@ import ButtonRepo from '@/components/ButtonRepo.vue'
       >
         About Page
         <br />
-        <span class="text-indigo-600">Vite + Vue 3 + Tailwind CSS</span>
       </h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">

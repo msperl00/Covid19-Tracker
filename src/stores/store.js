@@ -6,7 +6,7 @@ export const useStore = defineStore('main', {
     // other options...
     state: () => {
         // all these properties will have their type inferred automatically
-        return { count: 0 }
+        return { count: 5 }
     },
     actions: {
         increment(val = 1) {

@@ -1,46 +1,30 @@
 
 
 
-
-# Vue3-Pinia-Router-Tailwind
+ # Covid-19-Tracker
 
 ## Description
-Template creates with Vite that includes a Vue 3 app template with routes and store. Regarding css we use Tailwind CSS
+Covid Tracker using a template from msperl00 Vue3-Pinia-Router-Tailwind
 
 ## Getting Started
 
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+```
+npm install
+```
 
 ### Executing program
 
 * How to run the program
-* Step-by-step bullets
 ```
-code blocks for commands
+npm run dev
 ```
-
-## Help
-
-Any advise for common problems or issues.
+* Build
 ```
-command to run if program contains helper info
+npm run build
 ```
-
 ## Authors
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
+ex. msperl00
 ## Version History
 
 * 0.2
@@ -55,10 +39,3 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
-# Covid-19-Tracker
