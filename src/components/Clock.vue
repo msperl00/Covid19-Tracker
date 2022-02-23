@@ -1,5 +1,5 @@
 <template>
- <div class="text-indigo-200 text-lg text-center hover:underline font-mono font-semibold">
+ <div class="text-indigo-200 text-lg text-center hover:underline font-mono font-semibold container">
       {{date.count}}
  </div>
 </template>

@@ -1,28 +1,33 @@
 <template>
-  <div class="container ">
-    <Clock />
+  <div>
+      
   </div>
+
 </template>
 
 <script>
 
 import { ref, onMounted } from 'vue'
-import Clock from './Clock.vue'
+
 export default {
     name: 'Tracker',
     components: {
-        Clock
+        
     },
     setup(){
-        const load = true;
-        const title= 'Global';
-        const worldData =  async () => {
+        let loading = true;
+        let title= 'Global';
+        let dateDate= '';
+        let status= {};
+        let countries= {};
+        
 
-            const response = await fetch('https://disease.sh/v3/covid-19/all');
+
+        const worldData =  async () => {
+            const response = await fetch('https://api.covid19api.com/summary');
             const data = await response.json();
             console.log(data);
             return data;
-        
         }
 
          onMounted( () => {

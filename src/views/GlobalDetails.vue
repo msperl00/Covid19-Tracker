@@ -1,13 +1,11 @@
 <template>
-  
-  
     <div
       class="mx-auto max-w-screen-xl  sm:px-4 lg:flex lg:justify-between md:flex md:justify-between lg:py-6 lg:px-8 md:py-6 md:px-8"
     >
       <h2
         class="text-3xl font-extrabold  leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
       >
-        Global Tracker <Tracker />
+        Global Tracker <Clock />
         <br />
       </h2>
       <div class="hidden w-full md:block md:w-auto">
@@ -21,19 +19,17 @@
         </div>
       </div>
     </div>
+    <div>
+      <Tracker/>
+    </div>
 </template>
 <script>
 import Tracker from '../components/Tracker.vue'
-
+import Clock from '../components/Clock.vue'
 export default {
     name: 'GlobalDetails',
-    components: {Tracker},
-    methods: {
-      goback: () => {
-        this.$route.router.push()
-        
-      }
-    }
+    components: {Tracker, Clock},
+    
 }
 </script>
 
