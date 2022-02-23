@@ -3,6 +3,7 @@
 
  # Covid-19-Tracker
 
+## TFG 
 ## Description
 Covid Tracker using a template from msperl00 Vue3-Pinia-Router-Tailwind
 
@@ -11,7 +12,6 @@ Covid Tracker using a template from msperl00 Vue3-Pinia-Router-Tailwind
 ```
 npm install
 ```
-
 ### Executing program
 
 * How to run the program
