@@ -4,6 +4,7 @@ import Spinner from "@/components/Spinner.vue";
 import { reactive, toRefs, ref} from 'vue'
 export default {
   name: "Home",
+  inject: ['mySpinner'],
   components: {
     Spinner, ButtonRepo
   },
@@ -13,7 +14,8 @@ export default {
       return {
         start
       }
-    }
+    },
+    
   
 };
 </script>
@@ -40,6 +42,6 @@ export default {
       </div>
     </div>
   </div>
-  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="this.start = !this.start">Spinner</button>
-    <Spinner :start="this.start"/>
-</template>
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="mySpinner.val = !mySpinner.val">Spinner</button>
+<!--     <Spinner :start="this.start"/>
+ --></template>

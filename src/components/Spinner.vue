@@ -4,6 +4,8 @@
 <div class="spin flex justify-center fixed h-full w-full" v-if="start">
          <img class="spinnerImage mt-64" src="../../public/images/load-corona.png"/>
   </div>
+  <!--   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="this.start = !this.start">Spinner</button>
+ -->
 </template>
 
 <script>
@@ -27,7 +29,7 @@ export default {
 .spin{
     z-index: -10;
     margin: 0 auto;
-/*     background-color: rgba(0,0,0,0.2);*/}
+     background-color: rgba(0,0,0,0.2);}
 
 .spinnerImage {
     
