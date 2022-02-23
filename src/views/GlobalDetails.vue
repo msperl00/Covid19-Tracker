@@ -7,7 +7,7 @@
       <h2
         class="text-3xl font-extrabold  leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
       >
-        Global Tracker
+        Global Tracker <Tracker />
         <br />
       </h2>
       <div class="hidden w-full md:block md:w-auto">
@@ -17,11 +17,10 @@
             class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:bg-indigo-500 focus:outline-none"
             >Go back</router-link
           >
+
         </div>
       </div>
     </div>
-  <Tracker />
-
 </template>
 <script>
 import Tracker from '../components/Tracker.vue'
@@ -29,7 +28,12 @@ import Tracker from '../components/Tracker.vue'
 export default {
     name: 'GlobalDetails',
     components: {Tracker},
-
+    methods: {
+      goback: () => {
+        this.$route.router.push()
+        
+      }
+    }
 }
 </script>
 

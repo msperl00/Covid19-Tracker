@@ -1,22 +1,26 @@
 <template>
-  <div class="container bg-indigo-400">
-    
+  <div class="container ">
+    <Clock />
   </div>
 </template>
 
 <script>
 
 import { ref, onMounted } from 'vue'
-
+import Clock from './Clock.vue'
 export default {
     name: 'Tracker',
+    components: {
+        Clock
+    },
     setup(){
-       
+        const load = true;
+        const title= 'Global';
         const worldData =  async () => {
 
             const response = await fetch('https://disease.sh/v3/covid-19/all');
-            console.log(response);
             const data = await response.json();
+            console.log(data);
             return data;
         
         }
@@ -25,6 +29,7 @@ export default {
              console.log('mounted in the composition api!')
              worldData();
         })
+       
     },
     methods: {
         

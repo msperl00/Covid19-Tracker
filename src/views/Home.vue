@@ -2,6 +2,7 @@
 import ButtonRepo from '@/components/ButtonRepo.vue'
 </script>
 <template>
+
   <div class="bg-slate-100">
     <div
       class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-6 lg:px-8 md:flex md:items-center md:justify-between md:py-6 md:px-8"
@@ -25,4 +26,6 @@ import ButtonRepo from '@/components/ButtonRepo.vue'
       </div>
     </div>
   </div>
+ 
+
 </template>
