@@ -3,7 +3,8 @@
 
  # Covid-19-Tracker
 
-## TFG 
+## TFG - Universidad de Léon
+
 ## Description
 Covid Tracker using a template from msperl00 Vue3-Pinia-Router-Tailwind
 
