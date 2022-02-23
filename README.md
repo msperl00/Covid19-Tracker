@@ -19,13 +19,14 @@ npm install
 ```
 npm run dev
 ```
-* Build
+* Production mode
 ```
 npm run build
 ```
 ## Authors
 
 ex. msperl00
+ex. Marco Speranza López
 ## Version History
 
 * 0.2
