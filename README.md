@@ -7,9 +7,12 @@
 
 ## Description
 Covid Tracker using a template from msperl00 Vue3-Pinia-Router-Tailwind
+Developing...
+
+## Next Step
+Soon you may have the posibility to rate my software
 
 ## Getting Started
-
 ```
 npm install
 ```
@@ -30,14 +33,16 @@ ex. Marco Speranza López
 ## Version History
 
 * 0.2
-    * Various bug fixes and optimizations
+    * World Data Analitics
     * See [commit change]() or See [release history]()
 * 0.1
-    * Initial Release
+    * Initial Release and base project
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
 ## Acknowledgments
+
+Html, css and javascript basically. Also have knowledge about Vue 3(Composition API, Router, Pinia), Tailwind framework of css is a big help.
 
