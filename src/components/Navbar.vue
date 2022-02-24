@@ -3,13 +3,13 @@
         <div class=" flex flex-wrap justify-between items-center mx-auto">
             <a href="#" class="flex">
                 <router-link to="/">
-                    <img class="mr-3 h-10" src="../../public/virus.png" alt="bacteria" />
+                    <img class="mr-3 h-10" src="../../public/images/virus.png" alt="bacteria" />
                 </router-link>
                 <span
                     class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white "
                 >Covid Tracker</span>
                 <router-link to="/about">
-                    <img class="ml-3 h-10" src="../../public/prismaticos.png" alt="prismaticos" />
+                    <img class="ml-3 h-10" src="../../public/images/prismaticos.png" alt="prismaticos" />
                 </router-link>
             </a>
             <div class="hidden w-full md:block md:w-auto"  id="mobile-menu">
