@@ -16,9 +16,7 @@ export default {
     },
      /* Asi se utilizan los props */
     setup(props){
-        setTimeout( () => {
-            props.start = false;
-        },2000)
+        
     }
    
 }
@@ -29,7 +27,8 @@ export default {
 .spin{
     z-index: -10;
     margin: 0 auto;
-     background-color: rgba(0,0,0,0.2);}
+/*      background-color: rgba(0,0,0,0.2);*/
+}
 
 .spinnerImage {
     

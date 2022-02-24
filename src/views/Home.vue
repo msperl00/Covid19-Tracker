@@ -1,7 +1,7 @@
 <script >
 import ButtonRepo from "@/components/ButtonRepo.vue";
 import Spinner from "@/components/Spinner.vue";
-import { reactive, toRefs, ref} from 'vue'
+import { reactive, toRefs, ref, inject, onMounted} from 'vue'
 export default {
   name: "Home",
   inject: ['mySpinner'],
@@ -9,10 +9,16 @@ export default {
     Spinner, ButtonRepo
   },
     setup () {
-      const start = ref(true)
-      console.log('Spinner at home '+start.value);
+     
+      const inj = inject('mySpinner')
+      console.log('Using Inject '+inj.val);
+      onMounted(() => {
+        setTimeout(() => {
+          inj.val = false;
+        },1800)
+      });
       return {
-        start
+        inj
       }
     },
     
@@ -42,6 +48,5 @@ export default {
       </div>
     </div>
   </div>
-  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="mySpinner.val = !mySpinner.val">Spinner</button>
-<!--     <Spinner :start="this.start"/>
+<!--   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="mySpinner.val = !mySpinner.val">Spinner</button>
  --></template>

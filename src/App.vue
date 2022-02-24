@@ -21,7 +21,7 @@ export default {
   },
   data: () => ({
     spin: {
-      val: false
+      val: true
     }
   }),
   setup() {
