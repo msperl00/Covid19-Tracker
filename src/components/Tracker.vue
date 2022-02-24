@@ -1,6 +1,7 @@
 <template>
-   <div ref="root" v-if="!loading.val" >Show data</div>
-
+   <div ref="root" v-if="!loading.val" >
+       <DataBox :stats="getStatus()" />
+   </div>
    <div v-else="" class="flex flex-col align-center justify-center text-center">
        <div class="text-gray-500 text-3xl mt-10 mb-6 font-bold">
            Loading data...
@@ -10,11 +11,11 @@
 <script>
 import { ref, onMounted, inject, onBeforeUpdate,onBeforeMount, computed} from 'vue'
 import {useFetch} from '../hooks/useFetch'
-
+import DataBox from '../components/DataBox.vue'
 export default {
     name: 'Tracker',
     components: {
-        
+        DataBox
     },
     setup(props, context){
         const loading = inject('mySpinner')
@@ -22,7 +23,7 @@ export default {
         
         let title= 'Global';
         let date= '';
-        let status= {};
+        let stats= {};
         let countries= {};
         let worldData = {};
 
@@ -34,13 +35,15 @@ export default {
 
          function getDate(){
              date = worldData.Date;
-/*              console.log(date);
- */         }
+             return date;
+          }
          function getStatus(){
-             status = worldData.Global;
+             stats = worldData.Global;
+             return stats;
          }
          function getCountries(){
              countries = worldData.Countries;
+             return countries;
          }
 
          onMounted( async () => {
@@ -53,14 +56,17 @@ export default {
                 loading.val = false;
             }, 2000)
                 
-            getDate();
-            getStatus();
-            getCountries();
+            
             }).catch(err => alert(err));
              
         })
 
-       return {getWorldData, loading}
+        onBeforeMount( () => {
+            // ! Gestionar en un futuro en cache, si tenemos toda esta información
+            loading.val = true;
+        })
+
+       return {getWorldData, loading, getStatus, getCountries, getDate}
        
     }
 }

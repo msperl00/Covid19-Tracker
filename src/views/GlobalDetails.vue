@@ -3,9 +3,9 @@
       class="mx-auto max-w-screen-xl  sm:px-4 lg:flex lg:justify-between md:flex md:justify-between lg:py-6 lg:px-8 md:py-6 md:px-8"
     >
       <h2
-        class="text-3xl font-extrabold  leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+        class="text-3xl  italic font-extrabold  leading-9 tracking-wider text-gray-900 sm:text-4xl sm:leading-10"
       >
-        Global Tracker <Clock />
+        Global details <Clock />
         <br />
       </h2>
       <div class="hidden w-full md:block md:w-auto">

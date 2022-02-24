@@ -31,7 +31,7 @@ export default {
       class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-6 lg:px-8 md:flex md:items-center md:justify-between md:py-6 md:px-8"
     >
       <h2
-        class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+        class="text-3xl font-extrabold leading-9 tracking-wide text-gray-900 sm:text-4xl sm:leading-10 italic"
       >
         Ready to track covid? 
         <br />
