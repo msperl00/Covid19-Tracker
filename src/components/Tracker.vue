@@ -1,8 +1,8 @@
 <template>
    <div ref="root" v-if="!loading.val" class="container" >
-    
+       <h1>{{title}}</h1>
        <DataBox :stats="getStatus()" />
-       <CountrySelect @get-country="getCountryData" :countries="this.getCountries()" />
+       <CountrySelect @get-country="getCountryData" :countries="getCountries()" />
    </div>
    <div v-else="" class="flex flex-col align-center justify-center text-center">
        <div class="text-gray-500 text-3xl mt-10 mb-6 font-bold">
@@ -24,7 +24,7 @@ export default {
         const loading = inject('mySpinner')
         console.log('Using Inject in Tracker '+loading.val);
         
-        let title= 'Global';
+        let title= ref('Global');
         let date= '';
         let stats= {};
         let countries= {};
@@ -53,7 +53,9 @@ export default {
 
          function getCountryData(country){
              stats = country;
-             title = country.Country;
+             console.log(stats);
+             title.value = country.Country;
+             console.log(title);
          }
 
          onMounted( async () => {
