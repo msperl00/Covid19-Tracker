@@ -1,25 +1,31 @@
 <template>
-    <div class="grid md:grid-cols-2 gap-4">
+    <div class="grid md:grid-cols-2 gap-4 space-x-5 mb-10">
         <div class="shadow-md bg-blue-100 p-10 text-center rounded">
-            <h3 class="text-3xl text-blue-900  font-bold hover:font-extrabold hover:tracking-wider mb-2">Cases</h3>
+            <h3
+                class="text-3xl text-blue-900 font-bold hover:font-extrabold hover:tracking-wider mb-2"
+            >Cases</h3>
+
             <div class="text-2xl mb-4 hover:tracking-wider">
-                <span class="font-bold hover:text-red-600"> New cases: </span>
-                <span class="">{{stats.NewConfirmed}}</span>
-            </div> 
-            <div class="text-2xl">
-                <span class="font-bold hover:text-red-600 hover:tracking-wider"> Total deaths: </span>
-               <span class=""> {{stats.TotalDeaths}}</span>
+                <span class="font-bold hover:text-red-600 mr-2">New cases:</span>
+                                    <span class="font-medium hover:text-black-800">{{ this.getNewCases() }}</span>
+
+            </div>
+            <div class="text-2xl hover:tracking-wider">
+                <span class="font-bold hover:text-red-600 mr-2">Total new deaths:</span>
+                <span class="font-medium">{{ this.getTotalDeaths() }}</span>
             </div>
         </div>
         <div class="shadow-md bg-blue-100 p-10 text-center rounded">
-            <h3 class="text-3xl text-blue-900  font-bold hover:font-extrabold hover:tracking-wider mb-2">Deaths</h3>
+            <h3
+                class="text-3xl text-blue-900 font-bold hover:font-extrabold hover:tracking-wider mb-2"
+            >Deaths</h3>
             <div class="text-2xl mb-4 hover:tracking-wider">
-                <span class="font-bold hover:text-red-600"> Last week deaths: </span>
-                <span class="">{{stats.NewDeaths}}</span>
-            </div> 
-            <div class="text-2xl">
-                <span class="font-bold hover:text-red-600 hover:tracking-wider"> Total deaths: </span>
-               <span class=""> {{stats.TotalConfirmed}}</span>
+                <span class="font-bold hover:text-red-600 mr-2">Last week deaths:</span>
+                <span class="font-medium">{{ this.getNewDeaths() }}</span>
+            </div>
+            <div class="text-2xl hover:tracking-wider">
+                <span class="font-bold hover:text-red-600 mr-2">Total deaths:</span>
+                <span class="font-medium">{{ this.getTotalConfirmed() }}</span>
             </div>
         </div>
     </div>
@@ -28,10 +34,30 @@
 <script>
 export default {
     name: 'DataBox',
-    props: ['stats']
+    props: ['stats'],
+    setup(props, context) {
+
+        function getTotalConfirmed() {
+            const ss = new Intl.NumberFormat('es-ES')
+            return ss.format(props.stats.TotalConfirmed);
+        }
+        function getNewDeaths() {
+            const ss = new Intl.NumberFormat('es-ES')
+            return ss.format(props.stats.NewDeaths);
+        }
+        function getTotalDeaths() {
+            const ss = new Intl.NumberFormat('es-ES')
+            return ss.format(props.stats.TotalDeaths);
+        }
+        function getNewCases() {
+            const ss = new Intl.NumberFormat('es-ES')
+            return ss.format(props.stats.NewConfirmed);
+        }
+
+        return { getTotalConfirmed, getNewDeaths, getTotalDeaths, getNewCases }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-
 </style>

@@ -1,6 +1,8 @@
 <template>
-   <div ref="root" v-if="!loading.val" >
+   <div ref="root" v-if="!loading.val" class="container" >
+    
        <DataBox :stats="getStatus()" />
+       <CountrySelect @get-country="getCountryData" :countries="this.getCountries()" />
    </div>
    <div v-else="" class="flex flex-col align-center justify-center text-center">
        <div class="text-gray-500 text-3xl mt-10 mb-6 font-bold">
@@ -12,10 +14,11 @@
 import { ref, onMounted, inject, onBeforeUpdate,onBeforeMount, computed} from 'vue'
 import {useFetch} from '../hooks/useFetch'
 import DataBox from '../components/DataBox.vue'
+import CountrySelect from '../components/CountrySelect.vue'
 export default {
     name: 'Tracker',
     components: {
-        DataBox
+        DataBox, CountrySelect
     },
     setup(props, context){
         const loading = inject('mySpinner')
@@ -37,6 +40,8 @@ export default {
              date = worldData.Date;
              return date;
           }
+          stats = worldData.Global;
+          
          function getStatus(){
              stats = worldData.Global;
              return stats;
@@ -44,6 +49,11 @@ export default {
          function getCountries(){
              countries = worldData.Countries;
              return countries;
+         }
+
+         function getCountryData(country){
+             stats = country;
+             title = country.Country;
          }
 
          onMounted( async () => {
@@ -66,7 +76,7 @@ export default {
             loading.val = true;
         })
 
-       return {getWorldData, loading, getStatus, getCountries, getDate}
+       return {getWorldData, loading, getStatus, getCountries, getDate, getCountryData, title}
        
     }
 }
