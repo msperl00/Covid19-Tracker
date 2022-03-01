@@ -5,7 +5,8 @@
       <h2
         class="text-3xl  italic font-extrabold  leading-9 tracking-wider text-gray-900 sm:text-4xl sm:leading-10"
       >
-        Global details <Clock />
+        {{title}} <Clock /> 
+        <!-- TODO -> Date -->
         <br />
       </h2>
       <div class="hidden w-full md:block md:w-auto">
@@ -20,15 +21,28 @@
       </div>
     </div>
     <div>
-      <Tracker/>
+      <Tracker @customChange="log"/>
     </div>
 </template>
 <script>
 import Tracker from '../components/Tracker.vue'
 import Clock from '../components/Clock.vue'
+import { ref, onMounted, inject, onBeforeUpdate,onBeforeMount, computed} from 'vue'
+
 export default {
     name: 'GlobalDetails',
     components: {Tracker, Clock},
+    setup(){
+
+      let title = ref('Global details');
+
+      function log(event) {
+          console.log('New country details -> '+event);
+          title.value = event;
+      }
+
+      return {title, log}
+    }
     
 }
 </script>

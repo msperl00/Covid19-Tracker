@@ -1,8 +1,7 @@
 <template>
    <div ref="root" v-if="!loading.val" class="container" >
-       <h1>{{title}}</h1>
-       <DataBox :stats="getStatus()" />
        <CountrySelect @get-country="getCountryData" :countries="getCountries()" />
+       <DataBox :stats="getStatus()" />
    </div>
    <div v-else="" class="flex flex-col align-center justify-center text-center">
        <div class="text-gray-500 text-3xl mt-10 mb-6 font-bold">
@@ -24,8 +23,9 @@ export default {
         const loading = inject('mySpinner')
         console.log('Using Inject in Tracker '+loading.val);
         
-        let title= ref('Global');
+       /*  let title= ref('Global'); */
         let date= '';
+        let title = ref('GLobal details');
         let stats= {};
         let countries= {};
         let worldData = {};
@@ -54,15 +54,14 @@ export default {
          function getCountryData(country){
              stats = country;
              console.log(stats);
-             title.value = country.Country;
-             console.log(title);
+             title.value = country.Country;            
          }
 
          onMounted( async () => {
              console.log('mounted in the composition api!')
             getWorldData().then((response) => {
                 worldData = response;
-                console.log('GetWorldData',worldData);
+                console.log('GetWorldData', worldData);
                 // ! Se quita el spinner cuando se obtenga la response
                  setTimeout(() => {
                 loading.val = false;
@@ -80,6 +79,13 @@ export default {
 
        return {getWorldData, loading, getStatus, getCountries, getDate, getCountryData, title}
        
+    },
+    watch: {
+        title(newValue, oldValue){
+            if(newValue != oldValue){
+                this.$emit("customChange", newValue);
+            }
+        }
     }
 }
 </script>

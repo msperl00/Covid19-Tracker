@@ -1,8 +1,8 @@
 <template>
-    <select @change="onChange()" v-model="selected" class="form-select block border p-3 w-full">
+    <select @change="onChange()" v-model="selected" class="form-select block border rounded p-3 w-full mb-5">
         <option value="0" >Select Country</option>
         <option v-for="country in countries" :value="country.ID"> {{country.Country}}</option>
-        
+        <!-- TODO interface del input -->
     </select>
     
 </template>
