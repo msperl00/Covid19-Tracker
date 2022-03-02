@@ -1,5 +1,5 @@
 <template>
-    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-4 dark:bg-gray-800">
         <div class=" flex flex-wrap justify-between items-center mx-auto">
             <a href="#" class="flex">
                 <router-link to="/">
@@ -7,12 +7,12 @@
                 </router-link>
                 <span
                     class="self-center text-2xl font-bold whitespace-nowrap dark:text-white tracking-wider "
-                >Covid-19 Tracker</span>
+                >COVID-19 TRACKER</span>
                 <router-link to="/about">
                     <img class="ml-3 h-10" src="../../public/images/prismaticos.png" alt="prismaticos" />
                 </router-link>
             </a>
-            <div class="hidden w-full md:block md:w-auto"  id="mobile-menu">
+            <div class="hidden w-full md:block md:w-auto px-10"  id="mobile-menu">
                 <ul
                     class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
                 >

@@ -10,7 +10,7 @@
    </div>
 </template>
 <script>
-import { ref, onMounted, inject, onBeforeUpdate,onBeforeMount, computed} from 'vue'
+import { ref, onMounted, inject, onBeforeUpdate,onBeforeMount, computed, reactive} from 'vue'
 import {useFetch} from '../hooks/useFetch'
 import DataBox from '../components/DataBox.vue'
 import CountrySelect from '../components/CountrySelect.vue'
@@ -22,11 +22,12 @@ export default {
     setup(props, context){
         const loading = inject('mySpinner')
         console.log('Using Inject in Tracker '+loading.val);
-        
+        const titleConst = 'GLOBAL DETAILS';
+        let addGlobal = ref(true);
        /*  let title= ref('Global'); */
         let date= '';
-        let title = ref('GLobal details');
-        let stats= {};
+        let title = ref('GLOBAL DETAILS');
+        let stats= reactive({});
         let countries= {};
         let worldData = {};
 
@@ -43,18 +44,32 @@ export default {
           stats = worldData.Global;
           
          function getStatus(){
-             stats = worldData.Global;
+             /* TO READ REACTIVE DATA */
+           if(title.value === 'GLOBAL DETAILS')
+                 stats = worldData.Global;
              return stats;
          }
+
          function getCountries(){
              countries = worldData.Countries;
+            console.log(addGlobal);
+             if(addGlobal){
+             const auxGlobal = worldData.Global;
+             countries.unshift(worldData.Global);
+             addGlobal = false;
+             }
+             console.log(countries);
+             console.log(addGlobal);
              return countries;
          }
-
+         
          function getCountryData(country){
              stats = country;
-             console.log(stats);
-             title.value = country.Country;            
+             console.log(country);
+             if(country.Country != undefined)
+                 title.value = country.Country;     
+             else
+                title.value = titleConst; 
          }
 
          onMounted( async () => {
@@ -62,14 +77,14 @@ export default {
             getWorldData().then((response) => {
                 worldData = response;
                 console.log('GetWorldData', worldData);
+                 stats = worldData.Global;
                 // ! Se quita el spinner cuando se obtenga la response
                  setTimeout(() => {
                 loading.val = false;
             }, 2000)
-                
+              
             
             }).catch(err => alert(err));
-             
         })
 
         onBeforeMount( () => {
@@ -77,7 +92,7 @@ export default {
             loading.val = true;
         })
 
-       return {getWorldData, loading, getStatus, getCountries, getDate, getCountryData, title}
+       return {getWorldData, loading, getStatus, getCountries, getDate, getCountryData, title, stats, addGlobal}
        
     },
     watch: {
