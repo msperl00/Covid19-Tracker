@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-slate-100 grid ">
+  <div class="bg-slate-100">
     <div
-      class="grid grid-cols-2 gap-4 content-start py-5 content-center items-center md:items-center md:justify-between sm:items-center sm:content-center sm:text-center sm:justify-around "
+      class="grid grid-cols-2 py-5 content-center items-center md:items-center md:justify-between sm:items-center sm:content-center sm:text-center sm:justify-between "
     >
     <div>
         <h2
-        class="font-light tracking-wide text-gray-900 sm:text-4xl sm:leading-10 italic sm:my-5"
+        class="font-light tracking-wide text-gray-900 text-4xl sm:leading-10 italic sm:my-5"
       >
         Ready to track Covid-19? 
         <br />
