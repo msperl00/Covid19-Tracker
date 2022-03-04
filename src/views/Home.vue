@@ -1,4 +1,5 @@
 <template>
+<Navbar />
   <div class="bg-slate-100">
     <div
       class="grid grid-cols-2 py-5 content-center items-center md:items-center md:justify-between sm:items-center sm:content-center sm:text-center sm:justify-between "
@@ -24,16 +25,14 @@
       </div>
     </div>
   </div>
-  <div class="h-screen-map flex flex-col">
+  <div class="min-h-screen flex flex-col ">
     <div class='relative flex flex-grow'>
         <nav class='bg-white shadow-sm p-6 space-y-6 w-64'> Navbar </nav>
           <Map />
     </div>
 
 </div>
- 
-    
-
+ <Footer />
 <!--   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="mySpinner.val = !mySpinner.val">Spinner</button>
  --></template>
 
@@ -41,6 +40,8 @@
 import ButtonRepo from "@/components/ButtonRepo.vue";
 import Map from "@/components/Map.vue"
 import Spinner from "@/components/Spinner.vue";
+import Navbar from '@/components/Navbar.vue'
+import Footer from '@/components/Footer.vue'
 import { reactive, toRefs, ref, inject, onMounted} from 'vue'
 
 
@@ -48,7 +49,7 @@ export default {
   name: "Home",
   inject: ['mySpinner'],
   components: {
-    Spinner, ButtonRepo, Map
+    Spinner, ButtonRepo, Map, Navbar, Footer
   },
     setup () {
      

@@ -1,7 +1,7 @@
 <template>
-    <nav class="bg-white border-gray-200 p-6 sm:px-4  bg-teal-500">
-        <div class="flex flex-wrap justify-between items-center mx-auto flex-shrink-0 ">
-            <a href="#" class="flex">
+    <nav class=" px-6 py-8  bg-teal-500">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="#" class="flex cursor-pointer text-white-800 dark:text-white">
                 <router-link to="/">
                     <img class="mr-3 h-10" src="../../public/images/virus.png" alt="bacteria" />
                 </router-link>
