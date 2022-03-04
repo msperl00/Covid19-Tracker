@@ -1,7 +1,23 @@
-<script setup>
+
+
+<script>
 import ButtonRepo from '@/components/ButtonRepo.vue'
+import { ref, onMounted, inject, onBeforeUpdate,onBeforeMount, computed, reactive} from 'vue'
+
+ export default {
+   setup(){
+     const loading = inject('mySpinner');
+      onMounted(() => {
+        loading.val = false;
+      })
+   }
+ }
+
 </script>
 
+<style lang="scss" scoped>
+
+</style>
 <template>
   <div class="bg-slate-100">
     <div
@@ -16,7 +32,7 @@ import ButtonRepo from '@/components/ButtonRepo.vue'
         <p class="text-lg font-light ml-16">Api by <a class="text-indigo-500" href="https://disease.sh/">covid19Api</a></p>
       </h2>
       <div id="BackHome" class="mt-8 flex lg:mt-0 lg:flex-shrink-0 ">
-        <div class="inline-flex rounded-md shadow">
+        <div class="inline-flex rounded-md shadow md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
           <router-link
             to="/"
             class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:bg-indigo-500 focus:outline-none"

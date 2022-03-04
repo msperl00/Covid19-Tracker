@@ -1,20 +1,20 @@
 <template>
   <div class="bg-slate-100">
     <div
-      class="mx-auto bg-slate-100 max-w-screen-2xl sm:px-4 lg:flex lg:justify-between md:flex md:justify-between lg:py-0 lg:pt-4 lg:px-8 md:py-6 md:px-8 lg:mb-5"
+      class="mx-auto bg-slate-100 max-w-screen-2xl sm:px-4 lg:flex lg:justify-between md:flex md:justify-between lg:py-0 lg:pt-4 lg:py-1 lg:px-8 md:py-6 md:px-8 lg:mb-5"
     >
       <h2
         class="text-3xl italic font-extrabold leading-9 tracking-wider text-gray-900 sm:text-4xl sm:leading-10"
       >
         {{ title }}
-        <Clock />
+         <Clock />
         <!-- TODO -> Date -->
         <br />
       </h2>
-
+       
       <div class="hidden w-full md:block md:w-auto lg:mt-4">
         <div
-          class="inline-flex rounded-md shadow md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
+          class="inline-flex rounded-md shadow md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium mr-24 "
         >
           <router-link
             to="/"
