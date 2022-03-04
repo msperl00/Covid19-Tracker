@@ -1,18 +1,20 @@
 <template>
-    <nav class=" px-6 py-8  bg-teal-500">
-        <div class="container mx-auto flex items-center justify-between">
-            <a href="#" class="flex cursor-pointer text-white-800 dark:text-white">
-                <router-link to="/">
-                    <img class="mr-3 h-10" src="../../public/images/virus.png" alt="bacteria" />
-                </router-link>
-                <span
-                    class="self-center text-2xl whitespace-nowrap dark:text-white  font-semibold tracking-tight"
-                >COVID-19 TRACKER</span>
-                <router-link to="/about">
-                    <img class="ml-3 h-10" src="../../public/images/prismaticos.png" alt="prismaticos" />
-                </router-link>
-            </a>
-            <div class="hidden w-full md:block md:w-auto px-10"  id="mobile-menu">
+    <nav class="w-full bg-white shadow relative z-20 bg-teal-500">
+        <div class="px-6 h-16 flex items-center lg:items-stretch mx-auto">
+           
+                <div class="mr-10 flex items-center"> 
+                    <a href="#" class="flex item-center">
+                    <router-link to="/">
+                    <img class="" src="../../public/images/virus.png" alt="bacteria" />
+                  </router-link>
+                 </a>
+                 <span
+                    class="self-center tracking-wider text-2xl whitespace-nowrap dark:text-white  fa-solid fa-text tracking-tight ml-5"
+                >COVID-19 TRACKER
+                </span>
+                </div>
+           
+            <div class=" xl:flex hidden items-center h-full"  id="mobile-menu">
                 <ul
                     class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
                 >
