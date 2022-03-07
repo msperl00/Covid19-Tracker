@@ -1,30 +1,27 @@
 <template>
-  <div class="bg-slate-100">
+  <div class="bg-gray-800 pt-8  relative z-10">
     <div
-      class="mx-auto bg-slate-100 max-w-screen-2xl sm:px-4 lg:flex lg:justify-between md:flex md:justify-between lg:py-0 lg:pt-4 lg:py-1 lg:px-8 md:py-6 md:px-8 lg:mb-5"
+      class="container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between "
     >
-      <h2
-        class="italic font-lightleading-9 tracking-wider text-gray-900 sm:text-4xl sm:leading-10"
+    <div>
+ <h2
+        class="fa-regular block tracking-wider text-white leading-4 mb-1 text-4xl sm:leading-10 sm:my-5 italic"
       >
         {{ title }}
-         <Clock />
         <!-- TODO -> Date -->
         <br />
       </h2>
-       
-      <div class="hidden w-full md:block md:w-auto lg:mt-4">
-        <div
-          class="inline-flex rounded-md shadow md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium mr-24 "
-        >
+      <Clock/>
+    </div>
+      <div class="mx-20 inline-flex rounded-md lg:mt-0 lg:flex-shrink-0 mb-6">
           <router-link
             to="/"
-            class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:bg-indigo-500 focus:outline-none"
+            class=" mx-5 inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:bg-indigo-500 focus:outline-none"
           >Go back</router-link>
         </div>
-      </div>
-    </div>
+    </div> 
   </div>
-  <div>
+  <div class="mt-10 min-h-screen">
     <Tracker @customChange="log" />
   </div>
 </template>
