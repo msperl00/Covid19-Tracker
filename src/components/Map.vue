@@ -11,16 +11,22 @@ import { reactive, toRefs, ref, inject, onMounted} from 'vue'
 
 export default{
     setup(){
-
+             let countZoom = 3;
              let map; 
-const southWest = L.latLng(-89.98155760646617, -180);
-const northEast = L.latLng(89.99346179538875, 180);
-const bounds = L.latLngBounds(southWest, northEast);
+const southWest = leaflet.latLng(-89.98155760646617, -180);
+const northEast = leaflet.latLng(89.99346179538875, 180);
+const bounds = leaflet.latLngBounds(southWest, northEast);
 
       onMounted(() => {
       
 
-       map = leaflet.map('map').setView([39.505, -0.09], 6.2);
+       map = leaflet.map('map', {
+        smoothSensitivity: 1,
+        zoomSpan: 0.20,
+        doubleClickZoom:true,
+        maxBounds: bounds,
+        zoomAnimation: true
+    }).setView([39.505, -2.59], 3);
        leaflet.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaXRhbWFyY28iLCJhIjoiY2wwYzloZjJtMHpibzNpcnF0ZDlkeGdvNCJ9.tKPKbQ719rwU4fJmXtENmA', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -34,10 +40,17 @@ const bounds = L.latLngBounds(southWest, northEast);
     accessToken: 'pk.eyJ1IjoiaXRhbWFyY28iLCJhIjoiY2wwYzloZjJtMHpibzNpcnF0ZDlkeGdvNCJ9.tKPKbQ719rwU4fJmXtENmA'
 }).addTo(map);
 
-map.setMaxBounds(bounds);
+map.zoomControl.setPosition('topright');
 map.on('drag', function() {
     map.panInsideBounds(bounds, { animate: true });
 });
+
+    setInterval(function(){
+
+        if(countZoom < 7)
+            map.setZoom(countZoom += 0.20)
+   
+    }, 100);
       }); 
     }
 }
