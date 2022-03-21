@@ -81,14 +81,14 @@ export default {
                 // ! Se quita el spinner cuando se obtenga la response
                  setTimeout(() => {
                 loading.val = false;
-            }, 2000)
+            }, 1000)
               
             
             }).catch(err => alert(err));
         })
 
         onBeforeMount( () => {
-            // ! Gestionar en un futuro en cache, si tenemos toda esta información
+            // !TODO Gestionar en un futuro en cache, si tenemos toda esta información
             loading.val = true;
         })
 

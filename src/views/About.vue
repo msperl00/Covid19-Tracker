@@ -1,23 +1,4 @@
 
-
-<script>
-import ButtonRepo from '@/components/ButtonRepo.vue'
-import { ref, onMounted, inject, onBeforeUpdate,onBeforeMount, computed, reactive} from 'vue'
-
- export default {
-   setup(){
-     const loading = inject('mySpinner');
-      onMounted(() => {
-        loading.val = false;
-      })
-   }
- }
-
-</script>
-
-<style lang="scss" scoped>
-
-</style>
 <template>
   <div class="bg-slate-100">
     <div
@@ -43,4 +24,26 @@ import { ref, onMounted, inject, onBeforeUpdate,onBeforeMount, computed, reactiv
       </div>
     </div>
   </div>
+   <div class="mt-10 min-h-screen">
+   
+  </div>
 </template>
+
+<script>
+import ButtonRepo from '@/components/ButtonRepo.vue'
+import { ref, onMounted, inject, onBeforeUpdate,onBeforeMount, computed, reactive} from 'vue'
+
+ export default {
+   setup(){
+     const loading = inject('mySpinner');
+      onMounted(() => {
+        loading.val = false;
+      })
+   }
+ }
+
+</script>
+
+<style lang="scss" scoped>
+
+</style>

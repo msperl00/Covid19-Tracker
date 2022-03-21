@@ -1,5 +1,5 @@
 <template>
-    <body class="overflow-hidden bottom-0 w-full h-screen/4 ">
+    <body class="overflow-hidden bottom-0 w-full h-screen/4 bg-slate-100">
     <div class="mx-auto py-5 xl:px-20 lg:px-12 sm:px-6 px-4">
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4">
         <div class="flex flex-col flex-shrink-0">
