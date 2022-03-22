@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-800 pt-8  relative z-10">
+  <div class="bg-gray-800 pt-8 relative z-10">
     <div
       class="container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between "
     >
