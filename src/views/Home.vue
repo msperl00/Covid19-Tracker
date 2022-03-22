@@ -2,8 +2,9 @@
 <NavRoutes />
   <div class="min-h-screen flex flex-col ">
     <div class='relative flex flex-grow'>
-        <nav class='bg-white shadow-sm p-6 space-y-6 w-64 hidden'> Navbar </nav>
-          <Map />
+      <Sidebar />
+<!--         <nav class='bg-white shadow-sm p-6 space-y-6 w-64 '> Navbar </nav>-->          
+      <Map />
     </div>
 </div>
 <!--   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="mySpinner.val = !mySpinner.val">Spinner</button>
@@ -14,6 +15,7 @@ import ButtonRepo from "@/components/ButtonRepo.vue";
 import Map from "@/components/Map.vue"
 import Spinner from "@/components/Spinner.vue";
 import NavRoutes from "@/components/NavRoutes.vue"
+import Sidebar from "@/components/Sidebar.vue"
 import { reactive, toRefs, ref, inject, onMounted} from 'vue'
 
 
@@ -21,7 +23,7 @@ export default {
   name: "Home",
   inject: ['mySpinner'],
   components: {
-    Spinner, ButtonRepo, Map, NavRoutes
+    Spinner, ButtonRepo, Map, NavRoutes, Sidebar
   },
     setup () {
      

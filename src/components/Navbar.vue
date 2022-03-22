@@ -1,6 +1,6 @@
 <template>
 <!-- TODO NO TOCAR CSS -->
-    <nav class="w-full bg-white shadow relative z-20 bg-teal-500">
+    <nav class="w-full bg-white shadow relative z-20 bg-gray-900 border-b-2 border-current ">
         <div class="px-6 h-16 flex items-center lg:items-stretch mx-auto">
            
                 <div class="mr-10 flex items-center"> 

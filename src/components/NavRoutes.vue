@@ -19,7 +19,7 @@
         <div class="inline-flex rounded-md lg:mt-0 lg:flex-shrink-0 ">
           <router-link
             to="/trackerDetails"
-            class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium leading- text-white transition duration-150 ease-in-out hover:bg-indigo-500 focus:outline-none sm:py-3"
+            class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-800 px-5 py-3 text-base font-medium leading- text-white transition duration-150 ease-in-out hover:bg-indigo-600 focus:outline-none sm:py-3"
           >Go track</router-link>
         </div>
          <ButtonRepo />
