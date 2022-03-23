@@ -1,5 +1,5 @@
 <template>
-    <div class="grid md:grid-cols-2 gap-4 space-x-5 mb-10">
+    <div class="grid md:grid-cols-2 gap-4 mb-10">
         <div class="shadow-md bg-blue-100 p-10 text-center rounded">
             <h3
                 class="text-3xl text-blue-900 font-bold hover:font-extrabold hover:tracking-wider mb-2"
@@ -7,7 +7,7 @@
 
             <div class="text-2xl mb-4 hover:tracking-wider">
                 <span class="font-bold hover:text-red-600 mr-2">New cases:</span>
-                                    <span class="font-medium hover:text-black-800">{{ this.getNewCases() }}</span>
+                <span class="font-medium hover:text-black-800">{{ this.getNewCases() }}</span>
 
             </div>
             <div class="text-2xl hover:tracking-wider">

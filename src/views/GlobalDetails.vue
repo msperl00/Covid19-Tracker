@@ -20,19 +20,29 @@
           >Go back</router-link>
         </div>
     </div> 
+    
   </div>
-  <div class="mt-10 min-h-screen">
+    <div class="flex flex-col">
+    <div class='flex flex-grow'>
+      <Sidebar />
+      <div class="mt-10 min-h-screen">
     <Tracker @customChange="log" />
   </div>
+    </div>
+    
+</div>
+
+  
 </template>
 <script>
 import Tracker from '../components/Tracker.vue'
 import Clock from '../components/Clock.vue'
+import Sidebar from '../components/Sidebar.vue'
 import { ref, onMounted, inject, onBeforeUpdate, onBeforeMount, computed } from 'vue'
 
 export default {
   name: 'GlobalDetails',
-  components: { Tracker, Clock },
+  components: { Tracker, Clock, Sidebar },
   setup() {
 
     let title = ref('Global details');

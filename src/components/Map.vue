@@ -1,5 +1,5 @@
 <template>
-    <div id="map" class="bg-blue-200 bg-slate-100 flex-1 ">
+    <div id="map" class="flex-1 border-2 ">
 
     </div>
 </template>
@@ -47,8 +47,8 @@ map.on('drag', function() {
 
     setInterval(function(){
 
-        if(countZoom < 7)
-            map.setZoom(countZoom += 0.20)
+        if(countZoom < 6)
+            map.setZoom(countZoom += 0.25)
    
     }, 100);
       }); 

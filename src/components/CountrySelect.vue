@@ -1,5 +1,5 @@
 <template>
-    <select @change="onChange()" v-model="selected" class="form-select block border rounded p-3 w-full mb-5">
+     <select @change="onChange()" v-model="selected" class="form-select block border rounded p-3 w-full mb-5">
         <option value="0" >Select Country</option>
         <option v-for="country in countries" :value="country.ID"> 
         <span v-if="country.ID == undefined" >Global</span>
@@ -7,7 +7,9 @@
         </option>
         <!-- TODO interface del input -->
     </select>
-    
+    <div>
+
+    </div>
 </template>
 <script >
     export default {
@@ -19,7 +21,8 @@
         },
         data() {
             return {
-                selected: 0
+                selected: 0,
+
             }
         },
         methods: {
@@ -32,7 +35,4 @@
         }
     }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>

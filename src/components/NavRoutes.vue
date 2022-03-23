@@ -32,7 +32,6 @@
 
 <script>
 import ButtonRepo from "@/components/ButtonRepo.vue";
-import Drawer from "vue-simple-drawer"
 import { reactive, toRefs, ref, inject, onMounted} from 'vue'
 
 export default {
