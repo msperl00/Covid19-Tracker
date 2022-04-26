@@ -1,7 +1,7 @@
 
 
 <template>
-  <Navbar />
+  <HeaderBar />
       <Spinner :start="spin.val"/>
   <router-view />
    <Footer />
@@ -12,14 +12,14 @@
 /* SCRIPT setup CAN NOT CONTAIN export default */
 import { useStore } from './stores/store';
 import { storeToRefs } from 'pinia'
-import Navbar from './components/Navbar.vue'
+import HeaderBar from './components/HeaderBar.vue'
 import Spinner from "@/components/Spinner.vue";
 import Footer from './components/Footer.vue';
 
 import { reactive, toRefs, ref} from 'vue'
 export default {
   components: {
-    Navbar,
+    HeaderBar,
     Spinner,
     Footer
   },

@@ -1,5 +1,5 @@
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
+import Documentation from '../views/Documentation.vue'
 import NotFound from '../views/NotFound.vue'
 import GlobalDetails from '../views/GlobalDetails.vue'
 
@@ -7,14 +7,14 @@ import GlobalDetails from '../views/GlobalDetails.vue'
 export const routes = [
   { path: '/', component: Home, meta: { title: 'Home' } },
   {
-    path: '/about',
-    meta: { title: 'About' },
-    component: About,
+    path: '/Documentation',
+    meta: { title: 'Documentation' },
+    component: Documentation,
   },
   {
-    path: '/about',
-    meta: { title: 'About' },
-    component: About,
+    path: '/Documentation',
+    meta: { title: 'Documentation' },
+    component: Documentation,
   },
   {
     path: '/trackerDetails',

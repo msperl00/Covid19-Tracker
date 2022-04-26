@@ -44,5 +44,5 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ## Acknowledgments
 
-Html, css and javascript basically. Also have knowledge about Vue 3(Composition API, Router, Pinia), Tailwind framework of css is a big help.
+Html, css and javascript basically. Also have knowledge Documentation Vue 3(Composition API, Router, Pinia), Tailwind framework of css is a big help.
 

@@ -55,7 +55,7 @@
           <h2 class="text-base font-semibold leading-4 text-gray-800">Company</h2>
           <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">Blog</a>
           <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">Pricing</a>
-          <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">About Us</a>
+          <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">Documentation Us</a>
           <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">Contact us</a>
           <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">Testimonials</a>
         </div>

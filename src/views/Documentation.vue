@@ -1,12 +1,10 @@
 
 <template>
-  <div class="bg-slate-100">
-    <div
-      class="bg-slate-100 mx-auto max-w-screen-xl px-5 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-6 lg:px-8  md:flex md:items-center md:justify-between md:py-6 md:px-8"
-    >
+  <div class="bg-gray-600 mx-auto max-w-screen-xl px-5 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-6 lg:px-8  md:flex md:items-center md:justify-between md:py-6 md:px-8">
+  
     <div class="container flex">
        <h2
-        class="text-3xl font-extrabold  leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+        class="text-3xl text-white font-bold  leading-9 tracking-wide sm:text-4xl sm:leading-10"
       >
       <i class="fa fa-viruses mr-3 h-10 mb-3"></i>
         Documentation
@@ -18,8 +16,8 @@
       <img class="ml-5" src="../../public/images/information.png" alt="información" />
       </button>
     </div>
-      <div id="BackHome" class="mt-8 flex lg:mt-0 lg:flex-shrink-0 ">
-        <div class="inline-flex rounded-md shadow md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+      <div id="BackHome" class="mt-8 flex flex-row lg:mt-0 lg:flex-shrink-0 ">
+        <div class="inline-flex rounded-md shadow md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
           <router-link
             to="/"
             class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:bg-indigo-500 focus:outline-none"
@@ -29,7 +27,7 @@
         <ButtonRepo />
       </div>
     </div>
-  </div>
+ 
    <div class="mt-10 min-h-screen">
    
   </div>

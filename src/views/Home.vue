@@ -1,14 +1,13 @@
 <template>
-<NavRoutes />
-  <div class="min-h-screen flex flex-col ">
-    <div class='relative flex flex-grow'>
-      <Sidebar />
-<!--         <nav class='bg-white shadow-sm p-6 space-y-6 w-64 '> Navbar </nav>-->          
-      <Map />
-    </div>
-</div>
-<!--   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="mySpinner.val = !mySpinner.val">Spinner</button>
- --></template>
+  <NavRoutes />
+    <div class="min-h-screen flex flex-col">
+      <div class='relative flex flex-grow'>
+        <Sidebar />
+          <!-- KeepAlive -->
+        <Map />
+      </div>
+  </div>
+</template>
 
 <script >
 import ButtonRepo from "@/components/ButtonRepo.vue";
