@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['"Helvetica"', ...defaultTheme.fontFamily.sans],
+        lora: ["'Lora', serif"],
+        dm: "'DM Mono', monospace"
+
       },
        height: theme => ({
         "screen-map": "120vh",

@@ -1,8 +1,8 @@
 <template>
   <div class="bg-gray-600 relative flex flex-row-reverse h-32	">
 
-    <div class="flex-initial flex w-72 mx-1 my-1 flexstart">
-      <div class="inline-flex ">
+    <div class="flex-initial flex w-72 mx-1 my-1 flexstart min-w-full sm:min-w-0">
+      <div class="inline-flex">
         <router-link to="/trackerDetails"
           class="inline-flex  tracking-wider rounded-md  border border-transparent btn text-base ">
           Go track</router-link>
@@ -10,13 +10,12 @@
       </div>
     </div>
     <div class="flex-initial w-64  mx-1  my-1 "><!-- WhiteSpace --></div>
-    <div class="grow  mx-1  my-1 flexstart pl-12">
-      <p class="block tracking-wide text-5xl font-bold  text-white leading-10 italic">Ready to track Covid-19</p>
+    <div class="grow  mx-1  my-1 flexstart pl-12 md:flex">
+      <p class="block tracking-wide sm:text-3xl md:text-4xl font-bold lg:text-5xl text-white leading-10 italic">Ready to track Covid-19</p>
       <button
-        class="mx-5 inline-flex items-center justify-center  px-5 py-3 text-base tracking-wider text-white transition duration-150 ease-in-out  focus:outline-none sm:py-3">
+        class="lg:block items-center justify-center mx-10 py-3 text-base tracking-wider hidden ">
         <img class="" src="../../public/images/information.png" alt="información" />
       </button>
-
     </div>
   </div>
 
