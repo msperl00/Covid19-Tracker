@@ -1,5 +1,5 @@
 <template>
-<div class="min-h-screen  lg:flex inset-0 transform lg:transform-none lg:opacity-100  lg:relative z-10  bg-gray-700 text-white h-screen p-3">
+<div class="min-h-screen  lg:flex inset-0 transform lg:transform-none lg:opacity-100  lg:relative z-10  bg-gray-700 text-white h-screen p-3 border-t-2">
   <!--  <span @click="toggleSideBar" class="flex justify-between p-2">
              <i class="fa-solid fa-window-maximize"></i>
    </span> -->
@@ -7,11 +7,13 @@
     <nav v-if="true"> <!--  visibility -->
      <ul class="mt-8">
        <!-- TODO BOTONES -->
-      <li>
+      <li class="divide-y divide-slate-200">
         <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Home</a>
         <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Documentation</a>
         <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Products</a>
         <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Pricing</a>
+        <p class="block px-4 py-2 hover:bg-indigo-800"></p>
+
       </li>
     </ul>
 </nav>

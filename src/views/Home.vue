@@ -1,6 +1,6 @@
 <template>
   <NavRoutes />
-    <div class="min-h-screen flex flex-col">
+    <div class="max-h-screen flex flex-col">
       <div class='relative flex flex-grow'>
         <Sidebar />
           <!-- KeepAlive -->

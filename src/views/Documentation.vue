@@ -1,6 +1,6 @@
 
 <template>
-  <div class="bg-gray-600 mx-auto max-w-screen-xl px-5 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-6 lg:px-8  md:flex md:items-center md:justify-between md:py-6 md:px-8">
+  <div class="bg-gray-600 mx-auto max-w-screen pl-10 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-6 lg:px-8  md:flex md:items-center md:justify-between md:py-6 md:px-8">
   
     <div class="container flex">
        <h2
@@ -20,7 +20,7 @@
         <div class="inline-flex rounded-md shadow md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
           <router-link
             to="/"
-            class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:bg-indigo-500 focus:outline-none"
+            class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn"
             >Back Home</router-link
           >
         </div>

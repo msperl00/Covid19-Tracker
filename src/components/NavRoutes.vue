@@ -1,18 +1,25 @@
 <template>
   <div class="bg-gray-600 relative flex flex-row-reverse h-32	">
-   
-    <div class="flex-initial w-32 mx-1 my-1 bg-red-200">
-      02
+
+    <div class="flex-initial flex w-72 mx-1 my-1 flexstart">
+      <div class="inline-flex ">
+        <router-link to="/trackerDetails"
+          class="inline-flex  tracking-wider rounded-md  border border-transparent btn text-base ">
+          Go track</router-link>
+        <ButtonRepo />
+      </div>
     </div>
-    <div class="flex-initial w-32  mx-1  my-1 bg-red-200">
-      03
-    </div>
-    <div class=" grow  mx-1 bg-red-200 my-1">
-       <h2
-          class="fa-regular block tracking-wider   lg:text-2xl text-white leading-4 mb-1  sm:leading-10 sm:my-5 md:leading-10 md:my-5 md:text-xl italic sm:text-xl"
-        >Ready to track Covid-19</h2>
+    <div class="flex-initial w-64  mx-1  my-1 "><!-- WhiteSpace --></div>
+    <div class="grow  mx-1  my-1 flexstart pl-12">
+      <p class="block tracking-wide text-5xl font-bold  text-white leading-10 italic">Ready to track Covid-19</p>
+      <button
+        class="mx-5 inline-flex items-center justify-center  px-5 py-3 text-base tracking-wider text-white transition duration-150 ease-in-out  focus:outline-none sm:py-3">
+        <img class="" src="../../public/images/information.png" alt="información" />
+      </button>
+
     </div>
   </div>
+
 </template>
 
 <script>
@@ -34,3 +41,4 @@ export default {
 
 <style>
 </style>
+
