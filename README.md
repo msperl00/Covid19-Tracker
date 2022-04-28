@@ -34,6 +34,7 @@ ex. Marco Speranza López
 
 * 0.2
     * World Data Analitics
+    * Develop according to web form
     * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release and base project

@@ -1,12 +1,15 @@
 <template>
-  <NavRoutes />
+<div>
+   <NavRoutes />
     <div class="max-h-screen flex flex-col">
+      </div>
       <div class='relative flex flex-grow'>
         <Sidebar />
           <!-- KeepAlive -->
-        <Map />
-      </div>
+        <Map  />
   </div>
+</div>
+ 
 </template>
 
 <script >
@@ -15,6 +18,7 @@ import Map from "@/components/Map.vue"
 import Spinner from "@/components/Spinner.vue";
 import NavRoutes from "@/components/NavRoutes.vue"
 import Sidebar from "@/components/Sidebar.vue"
+import Popup from "@/components/Popup.vue"
 import { reactive, toRefs, ref, inject, onMounted} from 'vue'
 
 
@@ -22,24 +26,12 @@ export default {
   name: "Home",
   inject: ['mySpinner'],
   components: {
-    Spinner, ButtonRepo, Map, NavRoutes, Sidebar
+    Spinner, ButtonRepo, Map, NavRoutes, Sidebar, Popup
   },
     setup () {
-     
-      const inj = inject('mySpinner')
-      console.log('Using Inject '+inj.val);
-    
-      onMounted(() => {
-        setTimeout(() => {
-          inj.val = false;
-        },1800)
-
-      });
-      return {
-        inj
-      }
-    },
-    
-  
+      /*  False to spinner*/
+      const loading = inject('mySpinner')
+      loading.val = false;
+    },  
 };
 </script>

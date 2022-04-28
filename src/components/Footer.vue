@@ -3,7 +3,7 @@
   <body class="overflow-hidden bottom-0 w-full bg-gray-700">
     <div class="mx-auto py-6 xl:px-20 lg:px-12 sm:px-6 px-4 ">
       <div class="flex items-center justify-between">
-         <div class="flex items-center  space-x-5 font-lora text-lg text-gray-200">
+         <div class="flex items-center  space-x-5 font-lora text-lg text-gray-200 italic">
             <img src="public/images/load-corona.png" alt="Work" class="h-8" />
              <img src="public/images/jeringa.png" alt="Work" class="h-8 mr-5" />
               <img src="public/images/load-corona.png" alt="Work" class="h-8 mr-5" />

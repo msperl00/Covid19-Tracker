@@ -3,11 +3,6 @@
        <CountrySelect @get-country="getCountryData" :countries="getCountries()" />
        <DataBox :stats="getStatus()" />
    </div>
-   <div v-else="" class="flex flex-col align-center justify-center text-center">
-       <div class="text-gray-500 text-3xl mt-10 mb-6 font-bold">
-           Loading data...
-       </div>
-   </div>
 </template>
 <script>
 import { ref, onMounted, inject, onBeforeUpdate,onBeforeMount, computed, reactive} from 'vue'
