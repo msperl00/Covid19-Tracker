@@ -6,15 +6,13 @@
       <div
         class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-8 text-white  text-xl text-md z-50">
         <button class="popup-close flex fixed items-center text-black font-extrabold transition ease-in-out   hover:-translate-y-1 hover:scale-110  duration-300" @click="TogglePopup()">
-          <p class=" opacity-75">X</p>
+          <p class="opacity-75">X</p>
         </button>
       </div>
       <div class="p-32 bg-amber-100 cursor-pointer ">
         <slot />
-
       </div>
     </div>
-
   </div>
 </template>
 

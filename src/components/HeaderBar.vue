@@ -4,7 +4,7 @@
         <div class="mr-10 flex items-center">
             <a href="#" class="flex item-center">
                 <router-link to="/">
-                    <img class="" src="../../public/images/virus.png" alt="bacteria" />
+                    <img class="h-12" src="../../public/images/Coronavirus/icono-ban.png" alt="bacteria" />
                 </router-link>
             </a>
             <p class="text-2xl font-bold whitespace-nowrap dark:text-white tracking-widest ml-5">

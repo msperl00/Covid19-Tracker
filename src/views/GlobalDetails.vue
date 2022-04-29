@@ -1,7 +1,7 @@
 <template>
   
   <!-- <div class="bg-gray-800 pt-8 relative z-10">
-    <div class="container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between ">
+    <div class="container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between">
       <div>
         <h2 class="fa-regular block tracking-wider text-white leading-4 mb-1 text-4xl sm:leading-10 sm:my-5 italic">
           {{ title }}
@@ -17,9 +17,11 @@
       </div>
     </div>
   </div> -->
+  <NavRoutes :title="this.title"/>
   <div class="flex flex-col">
     <div class='flex flex-grow'>
-      <div class="mt-10 min-h-screen">
+      <Sidebar :global="true"/>
+      <div class="mt-10 ">
         <Tracker @customChange="log" />
       </div>
     </div>
@@ -31,11 +33,12 @@
 import Tracker from '../components/Tracker.vue'
 import Clock from '../components/Clock.vue'
 import Sidebar from '../components/Sidebar.vue'
+import NavRoutes from '../components/NavRoutes.vue'
 import { ref, onMounted, inject, onBeforeUpdate, onBeforeMount, computed } from 'vue'
 
 export default {
   name: 'GlobalDetails',
-  components: { Tracker, Clock, Sidebar },
+  components: { Tracker, Clock, Sidebar, NavRoutes },
   setup() {
 
     let title = ref('Global details');

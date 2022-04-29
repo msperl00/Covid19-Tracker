@@ -1,10 +1,9 @@
 <template>
 <div>
-   <NavRoutes />
-    <div class="max-h-screen flex flex-col">
-      </div>
+   <NavRoutes v-bind:flag="true"/>
+    <div class="max-h-screen flex flex-col"></div>
       <div class='relative flex flex-grow'>
-        <Sidebar />
+        <Sidebar :global="false" />
           <!-- KeepAlive -->
         <Map  />
   </div>
@@ -20,7 +19,6 @@ import NavRoutes from "@/components/NavRoutes.vue"
 import Sidebar from "@/components/Sidebar.vue"
 import Popup from "@/components/Popup.vue"
 import { reactive, toRefs, ref, inject, onMounted} from 'vue'
-
 
 export default {
   name: "Home",

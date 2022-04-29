@@ -1,26 +1,47 @@
 <template>
-<div class="min-h-screen  lg:flex inset-0 transform lg:transform-none lg:opacity-100  lg:relative z-10  bg-gray-700 text-white h-screen p-3 border-t-2">
-  <!--  <span @click="toggleSideBar" class="flex justify-between p-2">
-             <i class="fa-solid fa-window-maximize"></i>
-   </span> -->
-  <transition name="slide-fade">
-    <nav v-if="true"> <!--  visibility -->
-     <ul class="mt-8">
-       <!-- TODO BOTONES -->
-      <li class="divide-y divide-slate-200">
-        <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Home</a>
-        <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Documentation</a>
-        <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Products</a>
-        <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Pricing</a>
-        <p class="block px-4 py-2 hover:bg-indigo-800"></p>
+  <div
+   
+    class="lg:flex inset-0 transform lg:transform-none lg:opacity-100  lg:relative z-10  bg-gray-700 text-white h-screen p-3 border-t-2">
+    <div  v-if="global">
+      <transition name="slide-fade">
+        <nav v-if="true">
+          <!--  visibility -->
+          <ul class="mt-8">
+            <!-- TODO BOTONES -->
+            <li class="divide-y divide-slate-200">
+              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Home</a>
+              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Documentation</a>
+              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Products</a>
+              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Pricing</a>
+              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Home</a>
+              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Documentation</a>
+              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Products</a>
+              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Pricing</a>
+              <p class="block px-4 py-2 hover:bg-indigo-800"></p>
 
-      </li>
-    </ul>
-</nav>
- </transition>
-
-</div>
-    
+            </li>
+          </ul>
+        </nav>
+      </transition>
+    </div>
+    <div v-else>
+      <transition name="slide-fade">
+        <nav v-if="true">
+          <!--  visibility -->
+          <ul class="mt-8">
+            <!-- TODO BOTONES -->
+            <li class="divide-y divide-slate-200">
+              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Home</a>
+              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Documentation</a>
+              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Products</a>
+             
+            </li>
+          </ul>
+        </nav>
+      </transition>
+    </div>
+  </div>
+ 
 </template>
 
 <script>
@@ -28,19 +49,21 @@ import { useSideBarStore } from '@/stores/sidebarStore'
 import { storeToRefs } from 'pinia'
 
 export default {
-  setup() {
+  props: {
+    global: Boolean
+  },
+  setup(props) {
     const store = useSideBarStore()
-
-    const {visibility, measures} = storeToRefs(store);
+    const { visibility, measures } = storeToRefs(store);
     console.log(measures.value.colapsed);
     console.log(visibility);
     console.log(visibility.value);
-    
-    
-    function toggleSideBar(){
-        store.toggleSideBar();
+    console.log(props.global);
+
+    function toggleSideBar() {
+      store.toggleSideBar();
     }
-  
+
 
     return {
       // you can return the whole store instance to use it in the template
@@ -51,17 +74,15 @@ export default {
 </script>
 
 <style>
-
-:root{
-    --sidebar-bg-color: #1d2431;
-    --sidebar-item-hover: #3a38a1;
-    --sidebar-item-active: #2a38a1;
+:root {
+  --sidebar-bg-color: #1d2431;
+  --sidebar-item-hover: #3a38a1;
+  --sidebar-item-active: #2a38a1;
 
 }
 </style>
 
 <style scoped>
-
 /*
   Enter and leave animations can use different
   durations and timing functions.
@@ -80,7 +101,7 @@ export default {
   opacity: 0;
 }
 
-.sidebar{
-    background-color: var(--sidebar-bg-color);
+.sidebar {
+  background-color: var(--sidebar-bg-color);
 }
 </style>
