@@ -1,6 +1,6 @@
 <template>
   <div
-   
+
     class="lg:flex inset-0 transform lg:transform-none lg:opacity-100  lg:relative z-10  bg-gray-700 text-white h-screen p-3 border-t-2">
     <div  v-if="global">
       <transition name="slide-fade">

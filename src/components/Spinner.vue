@@ -1,9 +1,12 @@
 
 <template>
-
-  <div class="spin flex justify-center fixed h-full w-full " v-if="start">
-    <img class="spinnerImage mt-64" src="../../public/images/Coronavirus/virus-3.png" />
+  <div v-if="start" class="fixed top-0 left-0 right-0 bottom-0 z-40 flex items-center w-full h-full justify-center">
+    <div class="absolute w-full h-full bg-gray-400 z-40 opacity-30"></div>
+    <div class="spin flex absolute justify-center z-50  h-full w-full">
+      <img class="spinnerImage mt-64 z-50" src="../../public/images/Coronavirus/virus-3.png" />
+    </div>
   </div>
+
 </template>
 
 <script>

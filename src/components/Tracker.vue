@@ -1,5 +1,6 @@
 <template>
-   <div ref="root" v-if="!loading.val" class="container" >
+  <Sidebar :global="true"/>
+   <div ref="root" v-if="!loading.val" class="container mt-10 " >
        <CountrySelect @get-country="getCountryData" :countries="getCountries()" />
        <DataBox :stats="getStatus()" />
    </div>
@@ -9,10 +10,12 @@ import { ref, onMounted, inject, onBeforeUpdate,onBeforeMount, computed, reactiv
 import {useFetch} from '../hooks/useFetch'
 import DataBox from '../components/DataBox.vue'
 import CountrySelect from '../components/CountrySelect.vue'
+import Sidebar from '../components/Sidebar.vue'
+
 export default {
     name: 'Tracker',
     components: {
-        DataBox, CountrySelect
+        DataBox, CountrySelect, Sidebar,
     },
     setup(props, context){
         const loading = inject('mySpinner')

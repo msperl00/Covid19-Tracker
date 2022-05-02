@@ -17,14 +17,13 @@ import Map from "@/components/Map.vue"
 import Spinner from "@/components/Spinner.vue";
 import NavRoutes from "@/components/NavRoutes.vue"
 import Sidebar from "@/components/Sidebar.vue"
-import Popup from "@/components/Popup.vue"
 import { reactive, toRefs, ref, inject, onMounted} from 'vue'
 
 export default {
   name: "Home",
   inject: ['mySpinner'],
   components: {
-    Spinner, ButtonRepo, Map, NavRoutes, Sidebar, Popup
+    Spinner, ButtonRepo, Map, NavRoutes, Sidebar
   },
     setup () {
       /*  False to spinner*/

@@ -20,10 +20,7 @@
   <NavRoutes :title="this.title"/>
   <div class="flex flex-col">
     <div class='flex flex-grow'>
-      <Sidebar :global="true"/>
-      <div class="mt-10 ">
         <Tracker @customChange="log" />
-      </div>
     </div>
   </div>
 
