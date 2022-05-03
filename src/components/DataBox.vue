@@ -2,30 +2,30 @@
     <div class="grid md:grid-cols-2 gap-4 mb-10">
         <div class="shadow-md bg-blue-100 p-10 text-center rounded">
             <h3
-                class="text-3xl text-blue-900 font-bold hover:font-extrabold hover:tracking-wider mb-2"
+                class="text-3xl text-blue-900 font-bold hover:font-extrabold  mb-4"
             >Cases</h3>
 
-            <div class="text-2xl mb-4 hover:tracking-wider">
+            <div class="text-2xl mb-4 text-left">
                 <span class="font-bold hover:text-red-600 mr-2">New cases:</span>
                 <span class="font-medium hover:text-black-800">{{ this.getNewCases() }}</span>
 
             </div>
-            <div class="text-2xl hover:tracking-wider">
-                <span class="font-bold hover:text-red-600 mr-2">Total new deaths:</span>
-                <span class="font-medium">{{ this.getTotalDeaths() }}</span>
+            <div class="text-2xl  text-left">
+                <span class="font-bold hover:text-red-600 mr-2">Total confirmed:</span>
+                <span class="font-medium">{{ this.getTotalConfirmed() }}</span>
             </div>
         </div>
         <div class="shadow-md bg-blue-100 p-10 text-center rounded">
             <h3
-                class="text-3xl text-blue-900 font-bold hover:font-extrabold hover:tracking-wider mb-2"
+                class="text-3xl text-blue-900 font-bold hover:font-extrabold  mb-4"
             >Deaths</h3>
-            <div class="text-2xl mb-4 hover:tracking-wider">
-                <span class="font-bold hover:text-red-600 mr-2">Last week deaths:</span>
+            <div class="text-2xl  mb-4 text-left">
+                <span class="font-bold hover:text-red-600 mr-2">New deaths :</span>
                 <span class="font-medium">{{ this.getNewDeaths() }}</span>
             </div>
-            <div class="text-2xl hover:tracking-wider">
+            <div class="text-2xl  text-left">
                 <span class="font-bold hover:text-red-600 mr-2">Total deaths:</span>
-                <span class="font-medium">{{ this.getTotalConfirmed() }}</span>
+                <span class="font-medium">{{ this.getTotalDeaths() }}</span>
             </div>
         </div>
     </div>

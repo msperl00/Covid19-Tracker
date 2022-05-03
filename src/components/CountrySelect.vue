@@ -7,9 +7,7 @@
         </option>
         <!-- TODO interface del input -->
     </select>
-    <div>
-
-    </div>
+ 
 </template>
 <script >
     export default {
@@ -27,6 +25,7 @@
         },
         methods: {
                 onChange() {
+                    console.log('HOLAAA');
                     const country = this.countries.find( (item) => item.ID === this.selected);
                     console.log(country);
                     this.$emit('get-country', country)

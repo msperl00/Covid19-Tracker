@@ -1,24 +1,17 @@
 <template>
   <div
-
-    class="lg:flex inset-0 transform lg:transform-none lg:opacity-100  lg:relative z-10  bg-gray-700 text-white h-screen p-3 border-t-2">
-    <div  v-if="global">
+    class="lg:flex inset-0 transform lg:transform-none lg:opacity-100  lg:relative z-10  bg-gray-700 text-white h-screen p-3 border-t-2 ">
+    <div v-if="global">
       <transition name="slide-fade">
-        <nav v-if="true">
-          <!--  visibility -->
-          <ul class="mt-8">
-            <!-- TODO BOTONES -->
-            <li class="divide-y divide-slate-200">
-              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Home</a>
-              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Documentation</a>
-              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Products</a>
-              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Pricing</a>
-              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Home</a>
-              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Documentation</a>
-              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Products</a>
-              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Pricing</a>
-              <p class="block px-4 py-2 hover:bg-indigo-800"></p>
-
+        <nav v-if="true" >
+            <button
+              class="block  px-1 py-2 mb-2 hover:bg-green-600  w-full text-base font-bold tracking-wider	uppercase" @click="intersected(country)"> Global </button>
+          <ul class="scroll-container">
+            <li v-for="country in countries">
+              <button v-if="country.ID != undefined"
+                class="block  px-1 py-2 hover:bg-indigo-800 active:text-green-500 w-full font-mono"
+                @click="intersected(country)
+                 ">{{ country.Country }}</button>
             </li>
           </ul>
         </nav>
@@ -34,41 +27,55 @@
               <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Home</a>
               <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Documentation</a>
               <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Products</a>
-             
+
             </li>
           </ul>
         </nav>
       </transition>
     </div>
   </div>
- 
+
 </template>
 
 <script>
 import { useSideBarStore } from '@/stores/sidebarStore'
 import { storeToRefs } from 'pinia'
+import { ref, onMounted, onUnmounted } from 'vue'
+import Observer from "./Observer.vue";
 
 export default {
-  props: {
-    global: Boolean
+  components: {
+    Observer,
   },
-  setup(props) {
+  props: {
+    global: Boolean,
+    countries: Array
+  },
+  data: () => ({ page: 1, items: [] }),
+  setup(props, context) {
+
+    let selected = 0;
     const store = useSideBarStore()
     const { visibility, measures } = storeToRefs(store);
     console.log(measures.value.colapsed);
     console.log(visibility);
     console.log(visibility.value);
     console.log(props.global);
-
+    console.log('Sidebar');
     function toggleSideBar() {
       store.toggleSideBar();
     }
-
-
     return {
       // you can return the whole store instance to use it in the template
-      store, visibility, measures, toggleSideBar
+      store, visibility, measures, toggleSideBar, selected,
     }
+  },
+  methods: {
+     intersected(item) {
+       alert(item.Country);
+                    this.$emit('get-country', item)
+                    this.$emit('get-title','GLOBAL DETAILS')
+    },
   },
 }
 </script>
@@ -103,5 +110,10 @@ export default {
 
 .sidebar {
   background-color: var(--sidebar-bg-color);
+}
+
+.scroll-container {
+  overflow-y: scroll;
+  height: 580px;
 }
 </style>
