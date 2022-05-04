@@ -5,12 +5,13 @@
       <transition name="slide-fade">
         <nav v-if="true" >
             <button
-              class="block  px-1 py-2 mb-2 hover:bg-green-600  w-full text-base font-bold tracking-wider	uppercase" @click="intersected(country)"> Global </button>
+              class="block  px-1 py-2 mb-2 bg-green-600 hover:bg-green-500  w-full text-lg font-bold tracking-wider	uppercase" @click="intersected(country, $event)"> Global </button>
           <ul class="scroll-container">
-            <li v-for="country in countries">
-              <button v-if="country.ID != undefined"
+            <li v-for="(country, i) in countries" :key="i" :id="country.Country">
+              <button  v-if="country.ID != undefined"
+                :class="{active: isActive}"
                 class="block  px-1 py-2 hover:bg-indigo-800 active:text-green-500 w-full font-mono"
-                @click="intersected(country)
+                @click="intersected(country, $event)
                  ">{{ country.Country }}</button>
             </li>
           </ul>
@@ -49,13 +50,14 @@ export default {
   },
   props: {
     global: Boolean,
-    countries: Array
+    countries: Array,
   },
-  data: () => ({ page: 1, items: [] }),
+  data: () => ({ page: 1, items: [], isActive: false }),
   setup(props, context) {
 
     let selected = 0;
-    const store = useSideBarStore()
+    let flagGreen = false;
+    const store = useSideBarStore();
     const { visibility, measures } = storeToRefs(store);
     console.log(measures.value.colapsed);
     console.log(visibility);
@@ -67,15 +69,27 @@ export default {
     }
     return {
       // you can return the whole store instance to use it in the template
-      store, visibility, measures, toggleSideBar, selected,
+      store, visibility, measures, toggleSideBar, selected
     }
   },
   methods: {
-     intersected(item) {
-       alert(item.Country);
-                    this.$emit('get-country', item)
-                    this.$emit('get-title','GLOBAL DETAILS')
+
+
+    getCountry(){
+
     },
+    /**
+     * Metodo que emite el evento que proporcionar
+     * el pais seleccionado en el sidebar
+     * @param {*} item 
+     */
+     intersected(item, event) {
+
+                    console.log(this.selected);
+                    document.getElementById(item.Country).style.backgroundColor = ' green' ; 
+                    this.$emit('get-country', item);
+                    this.$emit('get-title','GLOBAL DETAILS')
+    },             
   },
 }
 </script>
@@ -110,6 +124,10 @@ export default {
 
 .sidebar {
   background-color: var(--sidebar-bg-color);
+}
+
+.active{
+  background-color: greenyellow;
 }
 
 .scroll-container {

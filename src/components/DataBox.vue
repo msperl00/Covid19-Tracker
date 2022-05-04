@@ -2,7 +2,7 @@
     <div class="grid md:grid-cols-2 gap-4 mb-10">
         <div class="shadow-md bg-blue-100 p-10 text-center rounded">
             <h3
-                class="text-3xl text-blue-900 font-bold hover:font-extrabold  mb-4"
+                class="text-3xl text-blue-900 font-bold font-mono uppercase mb-4"
             >Cases</h3>
 
             <div class="text-2xl mb-4 text-left">
@@ -17,7 +17,7 @@
         </div>
         <div class="shadow-md bg-blue-100 p-10 text-center rounded">
             <h3
-                class="text-3xl text-blue-900 font-bold hover:font-extrabold  mb-4"
+                class="text-3xl text-blue-900 font-bold  font-mono uppercase mb-4"
             >Deaths</h3>
             <div class="text-2xl  mb-4 text-left">
                 <span class="font-bold hover:text-red-600 mr-2">New deaths :</span>

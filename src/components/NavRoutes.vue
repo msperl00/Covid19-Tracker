@@ -42,7 +42,7 @@
       </div>
       <div class="grow mx-1 my-1 flexstart pl-12 md:flex">
       <div>
-        <h2 class="fa-regular block tracking-widest font-extrabold text-white leading-4 mb-1 text-4xl sm:leading-10 sm:my-5 italic">
+        <h2 class="fa-regular font-lora block tracking-widest font-extrabold text-white leading-4 mb-1 text-4xl sm:leading-10 sm:my-5 italic uppercase">
           {{ title }}
         </h2>
         <Clock />
