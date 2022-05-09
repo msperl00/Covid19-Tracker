@@ -19,12 +19,11 @@ export default {
     components: {
         DataBox, CountrySelect, Sidebar,
     },
+    emits: ["customChange"],
     setup(props, context) {
         const loading = inject('mySpinner')
-        console.log('Using Inject in Tracker ' + loading.val);
         const titleConst = 'GLOBAL DETAILS';
         let addGlobal = ref(true);
-        /*  let title= ref('Global'); */
         let date = '';
         let title = ref('GLOBAL DETAILS');
         let stats = reactive({});
@@ -41,7 +40,7 @@ export default {
             date = worldData.Date;
             return date;
         }
-        stats = worldData.Global;
+
 
         function getStatus() {
             /* TO READ REACTIVE DATA */
@@ -52,25 +51,23 @@ export default {
 
         function getCountries() {
             countries = worldData.Countries;
-            console.log(addGlobal);
             if (addGlobal) {
                 const auxGlobal = worldData.Global;
                 countries.unshift(worldData.Global);
                 addGlobal = false;
             }
-            //console.log(countries);
-            //console.log(addGlobal);
             return countries;
         }
 
         function getCountryData(country) {
-            stats = country;
-            console.log(country);
-            if (country != undefined)
-                title.value = country.Country;
-            else
-                title.value = titleConst;
 
+            if (country != undefined){
+                title.value = country.Country;
+                stats = country;
+             } else{
+                title.value = titleConst;
+                getStatus();
+             }
                 console.log('Title: '+titleConst);
         }
 

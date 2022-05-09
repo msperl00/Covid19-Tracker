@@ -13,6 +13,7 @@
 export default {
     name: 'CountrySelect',
     props: ['countries'],
+    emits: ["get-country", "get-title"],
     setup(props, context) {
 
 
@@ -20,16 +21,13 @@ export default {
     data() {
         return {
             selected: 0,
-
         }
     },
     methods: {
         onChange() {
-            console.log('HOLAAA');
             const country = this.countries.find((item) => item.ID === this.selected);
-            console.log(country);
             this.$emit('get-country', country)
-            this.$emit('get-title', 'GLOBAL DETAILS')
+            //this.$emit('get-title', 'GLOBAL DETAILS')
         }
     }
 }

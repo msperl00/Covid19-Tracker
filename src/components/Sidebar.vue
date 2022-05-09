@@ -3,16 +3,16 @@
     class="lg:flex inset-0 transform lg:transform-none lg:opacity-100  lg:relative z-10  bg-gray-700 text-white h-screen p-3 border-t-2 ">
     <div v-if="global">
       <transition name="slide-fade">
-        <nav v-if="true" >
-            <button
-              class="block  px-1 py-2 mb-2 bg-green-600 hover:bg-green-500  w-full text-lg font-bold tracking-wider	uppercase" @click="intersected(country, $event)"> Global </button>
+        <nav v-if="true">
+          <button
+          id="Global"
+            class="block  px-1 py-2 mb-2 bg-green-600 hover:bg-green-500  w-full text-lg font-bold tracking-wider	uppercase"
+            @click="intersected(null, $event)"> Global </button>
           <ul class="scroll-container">
             <li v-for="(country, i) in countries" :key="i" :id="country.Country">
-              <button  v-if="country.ID != undefined"
-                :class="{active: isActive}"
-                class="block  px-1 py-2 hover:bg-indigo-800 active:text-green-500 w-full font-mono"
-                @click="intersected(country, $event)
-                 ">{{ country.Country }}</button>
+              <button v-if="country.ID != undefined"
+                class="block  px-1 py-2 hover:bg-indigo-800 active:text-green-500 w-full font-mono" @click="intersected(country, $event)
+                ">{{ country.Country }}</button>
             </li>
           </ul>
         </nav>
@@ -52,18 +52,13 @@ export default {
     global: Boolean,
     countries: Array,
   },
-  data: () => ({ page: 1, items: [], isActive: false }),
+  data: () => ({ page: 1, items: [], isActive: false, selectedItem: null }),
   setup(props, context) {
 
     let selected = 0;
-    let flagGreen = false;
     const store = useSideBarStore();
     const { visibility, measures } = storeToRefs(store);
-    console.log(measures.value.colapsed);
-    console.log(visibility);
-    console.log(visibility.value);
-    console.log(props.global);
-    console.log('Sidebar');
+    console.log(props.countries);
     function toggleSideBar() {
       store.toggleSideBar();
     }
@@ -73,23 +68,32 @@ export default {
     }
   },
   methods: {
-
-
-    getCountry(){
-
-    },
     /**
      * Metodo que emite el evento que proporcionar
      * el pais seleccionado en el sidebar
      * @param {*} item 
      */
-     intersected(item, event) {
+    intersected(item, event) {
 
-                    console.log(this.selected);
-                    document.getElementById(item.Country).style.backgroundColor = ' green' ; 
-                    this.$emit('get-country', item);
-                    this.$emit('get-title','GLOBAL DETAILS')
-    },             
+      // ? IF IS COUNTRY
+      if (item != null) {
+        if (this.selectedItem == null) {
+          this.selectedItem = item.Country;
+        } else {
+          document.getElementById(this.selectedItem).style.color = 'white';
+          this.selectedItem = item.Country;
+        }
+        document.getElementById(item.Country).style.color = 'rgb(34 197 94)';
+        this.$emit('get-country', item);
+
+      // IF IS GLOBAL
+      } else {
+         if (this.selectedItem != null) {
+          document.getElementById(this.selectedItem).style.color = 'white';
+        }
+        this.$emit('get-country', item);
+      }
+    },
   },
 }
 </script>
@@ -126,7 +130,7 @@ export default {
   background-color: var(--sidebar-bg-color);
 }
 
-.active{
+.active {
   background-color: greenyellow;
 }
 

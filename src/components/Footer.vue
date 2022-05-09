@@ -83,7 +83,7 @@
 
 <script>
 export default {
-  name: "component",
+  name: "Footer",
   data() {
     return {};
   },

@@ -16,8 +16,8 @@ import HeaderBar from './components/HeaderBar.vue'
 import Spinner from "@/components/Spinner.vue";
 import Footer from './components/Footer.vue';
 
-import { reactive, toRefs, ref} from 'vue'
 export default {
+  name: 'app',
   components: {
     HeaderBar,
     Spinner,
