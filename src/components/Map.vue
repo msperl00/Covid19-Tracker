@@ -7,7 +7,7 @@
 <script>
 import leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { reactive, toRefs, ref, inject, onMounted} from 'vue'
+import { reactive, toRefs, ref, onMounted} from 'vue'
 
 export default{
     setup(){

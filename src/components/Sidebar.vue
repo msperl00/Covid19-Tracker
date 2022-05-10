@@ -9,10 +9,10 @@
             class="block  px-1 py-2 mb-2 bg-green-600 hover:bg-green-500  w-full text-lg font-bold tracking-wider	uppercase"
             @click="intersected(null, $event)"> Global </button>
           <ul class="scroll-container">
-            <li v-for="(country, i) in countries" :key="i" :id="country.Country">
-              <button v-if="country.ID != undefined"
+            <li v-for="(country, i) in countries" :key="i" :id="country.country">
+              <button
                 class="block  px-1 py-2 hover:bg-indigo-800 active:text-green-500 w-full font-mono" @click="intersected(country, $event)
-                ">{{ country.Country }}</button>
+                ">{{ country.country }}</button>
             </li>
           </ul>
         </nav>
@@ -25,9 +25,7 @@
           <ul class="mt-8">
             <!-- TODO BOTONES -->
             <li class="divide-y divide-slate-200">
-              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Home</a>
-              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Documentation</a>
-              <a href="#" class="block px-4 py-2 hover:bg-indigo-800 rounded-md">Products</a>
+             
 
             </li>
           </ul>
@@ -58,7 +56,6 @@ export default {
     let selected = 0;
     const store = useSideBarStore();
     const { visibility, measures } = storeToRefs(store);
-    console.log(props.countries);
     function toggleSideBar() {
       store.toggleSideBar();
     }
@@ -78,12 +75,12 @@ export default {
       // ? IF IS COUNTRY
       if (item != null) {
         if (this.selectedItem == null) {
-          this.selectedItem = item.Country;
+          this.selectedItem = item.country;
         } else {
           document.getElementById(this.selectedItem).style.color = 'white';
-          this.selectedItem = item.Country;
+          this.selectedItem = item.country;
         }
-        document.getElementById(item.Country).style.color = 'rgb(34 197 94)';
+        document.getElementById(item.country).style.color = 'rgb(34 197 94)';
         this.$emit('get-country', item);
 
       // IF IS GLOBAL

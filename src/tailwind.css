@@ -7,6 +7,9 @@
     .flexstart{
         @apply items-center flex justify-center;
     }
+    .flexleft{
+        @apply items-start flex justify-center;
+    }
     a:focus {
         @apply outline-none; 
      }

@@ -37,17 +37,20 @@
           <ButtonRepo />
         </div>
       </div>
-      <div class="flex-initial w-64  mx-1  my-1">
-        <!-- WhiteSpace -->
+      <div class="grow mx-1  flexstart pl-12 md:flex">
+        <div class="grid md:grid-cols-1 text-center items-center">
+          <h2
+            class=" font-lora block  text-center tracking-widest font-extrabold text-white leading-4  text-4xl sm:leading-10 sm:my-3  uppercase">
+            {{ title }}
+          </h2>
+          <div class="relative flexstart  ">
+                      <span class=" font-mono font-bold uppercase tracking-widest italic mx-10">{{ titleContinent }}</span>
+                      <img :src="this.url" :alt="this.title" class="relative w-auto h-10  shadow-2xl shadow-white ">
+          </div>
+
+          <!--  <Clock /> -->
+        </div>
       </div>
-      <div class="grow mx-1 my-1 flexstart pl-12 md:flex">
-      <div>
-        <h2 class="fa-regular font-lora block tracking-widest font-extrabold text-white leading-4 mb-1 text-4xl sm:leading-10 sm:my-5 italic uppercase">
-          {{ title }}
-        </h2>
-       <!--  <Clock /> -->
-      </div>
-    </div>
     </div>
   </div>
 </template>
@@ -56,7 +59,7 @@
 import ButtonRepo from "@/components/ButtonRepo.vue";
 import Popup from "@/components/Popup.vue"
 
-import { reactive, toRefs, ref, inject, onMounted } from 'vue'
+import { reactive, toRefs, ref, inject, provide, onMounted } from 'vue'
 
 export default {
   name: "NavRoutes",
@@ -66,10 +69,13 @@ export default {
   props: {
     TogglePopup: Boolean,
     flag: Boolean,
-    title: String
+    title: String,
+    titleContinent: String,
+    url: String
   },
   setup() {
     const home = true;
+    let url = ref('as');
     const popupTriggers = ref({
       buttonTrigger: false,
       timedTrigger: false
@@ -86,9 +92,10 @@ export default {
       home,
       Popup,
       popupTriggers,
-      TogglePopup
+      TogglePopup,
     }
   },
+
 }
 </script>
 
