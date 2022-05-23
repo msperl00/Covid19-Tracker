@@ -1,12 +1,12 @@
 <template>
   <div
-    class="lg:flex inset-0 transform lg:transform-none lg:opacity-100  lg:relative z-10  bg-gray-700 text-white h-screen p-3 border-t-2 ">
+    class="lg:flex inset-0 transform lg:transform-none lg:opacity-100  lg:relative z-10  bg-gray-700 text-white min-h-screen p-3 pt-5 border-t-2 border-b-2">
     <div v-if="global">
       <transition name="slide-fade">
         <nav v-if="true">
           <button
           id="Global"
-            class="block  px-1 py-2 mb-2 bg-green-600 hover:bg-green-500  w-full text-lg font-bold tracking-wider	uppercase"
+            class="block  px-1 py-2 mb-4 bg-green-600 hover:bg-green-500  w-full text-lg font-bold tracking-wider	uppercase border"
             @click="intersected(null, $event)"> Global </button>
           <ul class="scroll-container">
             <li v-for="(country, i) in countries" :key="i" :id="country.country">
@@ -82,14 +82,16 @@ export default {
         }
         document.getElementById(item.country).style.color = 'rgb(34 197 94)';
         this.$emit('get-country', item);
-
+/*         this.$emit('get-global', 'DataGlobalBox');
+ */        
       // IF IS GLOBAL
       } else {
          if (this.selectedItem != null) {
           document.getElementById(this.selectedItem).style.color = 'white';
         }
         this.$emit('get-country', item);
-      }
+/*         this.$emit('get-global', 'DatalBox');
+ */      }
     },
   },
 }
@@ -133,6 +135,6 @@ export default {
 
 .scroll-container {
   overflow-y: scroll;
-  height: 580px;
+  height: 750px;
 }
 </style>

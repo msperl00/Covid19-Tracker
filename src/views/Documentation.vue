@@ -29,7 +29,7 @@
     <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-6xl">
       <div class="text-base mx-auto lg:max-w-none">
         <p class="text-base text-indigo-600 font-semibold tracking-wide uppercase">tfg fundamentals</p>
-        <h1 class="mt-2 text-3xl leading-6 font-normal tracking-tight text-gray-900 font-lora sm:text-4xl">Hey everyone!
+        <h1 class="mt-2 text-3xl leading-6 font-normal tracking-tight text-gray-900 sm:text-4xl">Hey everyone!
         </h1>
       </div>
       <div class="mt-8 mx-auto lg:max-w-5xl lg:mx-0 lg:pr-64">
@@ -51,10 +51,10 @@
             project</h2>
           <div class="mt-4 text-gray-500 space-y-6">
             <p class="text-lg">
-              Well, here we are, 5 year leater, and we aren't still sayin the same things that we said 5 years ago which I think is a great self-development.
-              Our investment in my own education is going to be one of my greatest legacies in the future. But this requires workhard. So,
+              Well, here we are 5 year leater, and I am still sayin the same things that I said a long time ago, maybe in a different galaxy, far, far away...
+              My investment in my own education is going to be one of my greatest legacies in the future, always self-develop .But this requires workhard. So,
               <code class="bg-indigo-100 px-1 py-0.5 rounded text-indigo-900 italic">this is not a project</code> 
-              its something that the world we live in, this is real life.
+              its something that the world we live in. Enjoying the project!
             </p>
           </div>
         </div>

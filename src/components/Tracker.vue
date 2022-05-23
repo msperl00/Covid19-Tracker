@@ -1,9 +1,10 @@
 <template>
-    <Sidebar :global="true" v-if="!loading.val" @get-country="getCountryData" :countries="getCountries()" />
+    <Sidebar :global="true" v-if="!loading.val" @get-country="getCountryData" :countries="getCountries()" @get-global="(n) => boxComponent = n"/>
     <div ref="root" v-if="!loading.val" class="container mt-5 mb-5 h-full w-full">
         <!--         <CountrySelect @get-country="getCountryData" :countries="getCountries()" />
  -->
         <DataBox :stats="getStatus()" />
+       <!-- <component :is='boxComponent' :stats="getStatus()" /> -->
     </div>
     <div v-if="loading.val" class="h-screen w-full"></div>
 </template>
@@ -11,28 +12,29 @@
 import { ref, onMounted, inject, onBeforeUpdate, onBeforeMount, computed, reactive } from 'vue'
 import { useFetch } from '../hooks/useFetch'
 import DataBox from '../components/DataBox.vue'
+import DataGlobalBox from '../components/DataGlobalBox.vue'
 import CountrySelect from '../components/CountrySelect.vue'
 import Sidebar from '../components/Sidebar.vue'
 
 export default {
     name: 'Tracker',
     components: {
-        DataBox, CountrySelect, Sidebar,
+        DataBox, CountrySelect, Sidebar, DataGlobalBox
     },
     emits: ["customChange", "customChangeContinent"],
     setup(props, context) {
         const loading = inject('mySpinner');
         const titleConst = 'GLOBAL DETAILS';
         let addGlobal = ref(true);
-        let date = '';
         let title = ref('GLOBAL DETAILS');
         let titleContinent = ref('');
         let stats = reactive({});
         let countries = {};
         let worldData = {};
+        let boxComponent = ref('DataBox');
 
         async function getWorldData() {
-            const response = await fetch('https://api.covid19api.com/summary');
+            const response = await fetch('https://api.caw.sh/v3/covid-19/all');
             const data = await response.json();
             return data;
         }
@@ -42,28 +44,26 @@ export default {
             return data;
         }
 
-
+        /**
+         * Función que checkea el valor del titulo, modificado por el sidebar
+         * para saber si tiene que renderizar los datos de algún otro pais.
+         */
         function getStatus() {
+            
             /* TO READ REACTIVE DATA */
             if (title.value === 'GLOBAL DETAILS') {
-                stats = worldData.Global;
-                // titleContinent = '';
-
+                stats = worldData;
             }
             return stats;
         }
 
         function getCountries() {
-            /* countries = worldData.Countries;
-            if (addGlobal) {
-                const auxGlobal = worldData.Global;
-                countries.unshift(worldData.Global);
-                addGlobal = false;
-            } */
+         
             console.log('GetCountryData', countries);
 
             return countries;
         }
+
 
         /**
          * Seleccionamos segun si es pais o global los datos 
@@ -76,10 +76,13 @@ export default {
                 title.value = country.country;
                 titleContinent.value = country.continent;
                 stats = country;
+
             } else {
+
                 title.value = titleConst;
                 titleContinent.value = '';
                 getStatus();
+
             }
             console.log('Title: ' + titleConst);
         }
@@ -105,7 +108,7 @@ export default {
             getCountryFetchData().then(
                 function (response) {
                     countries = response;
-                    // console.log('GetCountryData', countries);
+                     console.log('GetCountryData', countries);
                     // ! Se quita el spinner cuando se obtenga la response
 
                 }, function (err) {
@@ -128,6 +131,8 @@ export default {
             getStatus,
             getCountries,
             getCountryData,
+/*             switchComponent,
+ */            boxComponent,
             title,
             stats,
             addGlobal,

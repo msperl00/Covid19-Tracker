@@ -9,7 +9,7 @@
           <p class="opacity-75">X</p>
         </button>
       </div>
-      <div class="p-32 bg-amber-100 cursor-pointer ">
+      <div class="py-5 px-5 bg-amber-100 cursor-pointer ">
         <slot />
       </div>
     </div>

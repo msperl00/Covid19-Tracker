@@ -3,23 +3,20 @@
   <body class="overflow-hidden bottom-0 w-full bg-gray-700">
     <div class="mx-auto py-6 xl:px-20 lg:px-12 sm:px-6 px-4 ">
       <div class="flex items-center justify-between">
-         <div class="flex items-center  space-x-5 font-lora text-lg text-gray-200 italic">
+         <div class="flex space-x-8 text-lg text-gray-200 ">
             <img src="public/images/Coronavirus/emojy-mask.png" alt="Work" class="h-8" />
              <img src="public/images/jeringa.png" alt="Work" class="h-8 mr-5" />
               <img src="public/images/Coronavirus/emojy-mask.png" alt="Work" class="h-8 mr-5" />
                <img src="public/images/jeringa.png" alt="Work" class="h-8 mr-5" />
                 <img src="public/images/Coronavirus/emojy-mask.png" alt="Work" class="h-8 mr-5" />
                  <img src="public/images/jeringa.png" alt="Work" class="h-8 mr-5" />
+        </div>
+        <div class="xl:flex items-center space-x-5 italic sm:hidden ">
           <p>Copyright © 2022 marcosperanzalopez</p>
           <p>|</p>
           <p>All rights reserved</p>
-           <img src="public/images/mapadecalor.png" alt="Work" class="h-8" />
-            <img src="public/images/Coronavirus/earth.png" alt="Work" class="h-8 mr-5" />
-             <img src="public/images/mapadecalor.png" alt="Work" class="h-8 mr-5" />
-              <img src="public/images/Coronavirus/earth.png" alt="Work" class="h-8 mr-5" />
-               <img src="public/images/mapadecalor.png" alt="Work" class="h-8 mr-5" />
         </div>
-        <div class="flex items-center gap-x-4 ">
+        <div class="flex items-center gap-x-16 ">
           <a href="https://www.instagram.com/itamarco14/"
             class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400  w-10 h-10 flex-shrink-0  cursor-pointer rounded-full flex items-center justify-center">
             <img alt="instagram" src="https://cdn-icons-png.flaticon.com/512/1077/1077042.png" width="150"

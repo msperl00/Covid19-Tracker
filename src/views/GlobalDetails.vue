@@ -1,8 +1,8 @@
 <template>
-  <NavRoutes :title="this.title" :titleContinent ="this.titleContinent" :url="this.url"/>
+  <NavRoutes :title="this.title" :titleContinent="this.titleContinent" :url="this.url" />
   <div class="flex flex-col">
     <div class='flex flex-grow'>
-        <Tracker @customChange="log"  @customChangeContinent= "logContinente"/>
+      <Tracker @customChange="log" @customChangeContinent="logContinente" />
     </div>
   </div>
 
@@ -19,31 +19,38 @@ export default {
   name: 'GlobalDetails',
   components: { Tracker, Clock, Sidebar, NavRoutes },
   setup() {
-    let url = ref('public/images/Coronavirus/earth.png');
+    let url = ref('public/images/Coronavirus/mapamundi.png');
     let title = ref('Global details');
-    let titleContinent = ref('');
+    let titleContinent = ref('WORLD DATA');
 
     provide('url', url)
-    
-  /**
-   *  Recibe el evento que cambia el titulo,
-   *  proveniente de Sidebar o GlobalDetails
-   * @param {*} event 
-   */
+
+    /**
+     *  Recibe el evento que cambia el titulo,
+     *  proveniente de GlobalDetails
+     * @param {*} event 
+     */
     function log(event) {
       title.value = event;
+
     }
-  /**
-   *  Recibe el evento que cambia el coninente,
-   *  proveniente de Sidebar o GlobalDetails
-   * @param {*} event 
-   */
+    /**
+     *  Recibe el evento que cambia el coninente,
+     *  proveniente de Sidebar o GlobalDetails
+     * @param {*} event 
+     */
     function logContinente(event) {
-      titleContinent.value = event;
-      console.log(titleContinent.value);
+
+      if (event === undefined || event === '') {
+        titleContinent.value = 'WORLD DATA';
+      } else {
+        titleContinent.value = event;
+        console.log(titleContinent.value);
+      }
+
     }
 
-    return { title, titleContinent,url, log, logContinente}
+    return { title, titleContinent, url, log, logContinente }
   }
 
 }

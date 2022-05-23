@@ -8,8 +8,8 @@ module.exports = {
       fontFamily: {
         sans: ['"Helvetica"', ...defaultTheme.fontFamily.sans],
         lora: ["'Lora', serif"],
-        dm: "'DM Mono', monospace"
-
+        dm: "'DM Mono', monospace",
+        console: "'Lucida Console', 'Courier New', monospace", 
       },
        height: theme => ({
         "screen-map": "120vh",
