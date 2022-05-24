@@ -15,7 +15,7 @@
       <button @click="toggle">
       </button>
     </div>
-    <div id="BackHome" class="mt-8 flex flex-row lg:mt-0 lg:flex-shrink-0 ">
+    <div id="BackHome" class="mt-8 flex flex-row lg:mt-0 lg:flex-shrink-0 flexstart">
       <div class="inline-flex rounded-md shadow md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
         <router-link to="/"
           class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn">

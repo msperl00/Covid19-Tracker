@@ -22,6 +22,11 @@
                     class="md:hover:bg-transparent md:border-0  md:hover:border-b md:p-0 dark:text-teal-200  md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                     Documentation</a>
             </div>
+            <div class="py-2 pr-4 pl-3 hidden md:block">
+                <a href="/aboutTracker"
+                    class="md:hover:bg-transparent md:border-0  md:hover:border-b md:p-0 dark:text-teal-200  md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                    Help me</a>
+            </div>
         </div>
 
 

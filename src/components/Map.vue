@@ -1,5 +1,5 @@
 <template>
-    <div id="map" class="grow lg:relative z-10  border-2">
+    <div id="map" class="grow relative z-10  border-2">
 
     </div>
 </template>

@@ -9,18 +9,17 @@
           <ButtonRepo />
         </div>
       </div>
-      <div class="flex-initial w-64  mx-1  my-1">
+      <div class="flex-initial w-54  mx-1  my-1">
         <!-- WhiteSpace -->
       </div>
       <div class="grow mx-1 my-1 flexstart pl-12 md:flex">
-        <p class="block tracking-wide sm:text-2xl md:text-3xl font-bold lg:text-4xl text-white leading-10 italic uppercase">Ready
+        <p class="block tracking-wide sm:text-2xl md:text-3xl font-medium lg:text-5xl text-white leading-10 italic uppercase">Ready
           to
           track Covid-19</p>
         <p class="text-7xl font-extrabold text-blue-800 "></p>
         <button id="PopUp " @click="() => TogglePopup('buttonTrigger')"
-          class="lg:block items-center justify-center mx-10">
-          <img class="h-12" src="../../public/images/Coronavirus/popup.png" alt="información" />
-        </button>
+          class="lg:block items-center justify-center mx-10 text-3xl text-gray-300 ">
+        <i class="fa fa-notes-medical"></i>       </button>
       </div>
     </div>
     <!-- Better rendering with teleport -->
@@ -53,7 +52,7 @@
       <div class="grow mx-1  flexstart pl-12 md:flex">
         <div class="grid md:grid-cols-1 text-center items-center">
           <h2
-            class=" font-lora block  text-center tracking-widest font-extrabold text-white leading-4  text-4xl sm:leading-10 sm:my-3  uppercase">
+            class="  block  text-center tracking-widest font-light text-white leading-4  text-4xl sm:leading-10 sm:my-3  uppercase">
             {{ title }}
           </h2>
           <div class="relative flexstart">
