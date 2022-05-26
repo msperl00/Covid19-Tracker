@@ -6,11 +6,17 @@
 ## TFG - Universidad de Léon
 
 ## Description
-Covid Tracker using a template from msperl00 Vue3-Pinia-Router-Tailwind
-Developing...
+Covid Tracker using a template from msperl00 Vue3-Pinia-Router-Tailwind.
+Web app under construction...
+
+## Steps completed
+
+1. Global details tracker box
+2. Rate my software
+3. Contact me
 
 ## Next Step
-Soon you may have the posibility to rate my software
+Soon you may have the posibility to play with localitation world map
 
 ## Getting Started
 ```
@@ -32,10 +38,9 @@ ex. msperl00
 ex. Marco Speranza López
 ## Version History
 
-* 0.2
+* 1.0
     * World Data Analitics
-    * Develop according to web form
-    * See [commit change]() or See [release history]()
+    * Rate the project
 * 0.1
     * Initial Release and base project
 
