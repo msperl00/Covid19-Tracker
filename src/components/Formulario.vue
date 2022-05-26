@@ -173,7 +173,7 @@ export default {
 
         function checkForm(e) {
             if (this.vote && this.email && this.identity && this.hours && this.message) {
-                console.log('Well done!!!');
+                //console.log('Well done!!!');
                  this.post.push(this.vote, this.identity, this.hours, this.email, this.massage );
                  console.warn(this.post);
                  this.errors = [];
@@ -209,7 +209,7 @@ export default {
             return re.test(email);
         }
         function sendPrevent() {
-            console.log('In send prevent');
+            //console.log('In send prevent');
         }
 
         return { errors, vote, email, identity, hours, message, checkForm, sendPrevent, validEmail, post }
