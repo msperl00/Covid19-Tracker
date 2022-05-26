@@ -6,13 +6,35 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Inter var"', ...defaultTheme.fontFamily.sans],
+        sans: ['"Helvetica"', ...defaultTheme.fontFamily.sans],
+        lora: ["'Lora', serif"],
+        dm: "'DM Mono', monospace",
+        console: "'Lucida Console', 'Courier New', monospace", 
       },
+       height: theme => ({
+        "screen-map": "120vh",
+        "screen/2": "50vh",
+        "screen/3": "calc(100vh / 3)",
+        "screen/4": "calc(100vh / 4)",
+        "screen/5": "calc(100vh / 5)",
+      }),
+      left: them => ({
+        "left-2/5": "40%"
+      }),
       container: { 
         center: true, 
-        padding: '2rem'
-        
-      }
+        padding: '1rem',
+        width: '100%'
+      },
+      borderWidth: {
+        DEFAULT: '1px',
+        '0': '0',
+        '2': '2px',
+        '3': '3px',
+        '4': '4px',
+        '6': '6px',
+        '8': '8px',
+      },
     },
   },
   plugins: [

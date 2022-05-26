@@ -1,23 +1,24 @@
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
+import Documentation from '../views/Documentation.vue'
 import NotFound from '../views/NotFound.vue'
 import GlobalDetails from '../views/GlobalDetails.vue'
+import Form from '../views/Form.vue'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
   { path: '/', component: Home, meta: { title: 'Home' } },
   {
-    path: '/about',
-    meta: { title: 'About' },
-    component: About,
+    path: '/documentation',
+    meta: { title: 'Documentation' },
+    component: Documentation,
   },
   {
-    path: '/about',
-    meta: { title: 'About' },
-    component: About,
+    path: '/suggestions',
+    meta: { title: 'Form' },
+    component: Form,
   },
   {
-    path: '/trackerDetails',
+    path: '/tracker',
     meta: { title: 'Global Details' },
     component: GlobalDetails,
   },

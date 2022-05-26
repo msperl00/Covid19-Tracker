@@ -12,7 +12,7 @@ export function useFetch(url) {
             const res = await fetch(url);
             arrayData.value = await res.json();
         } catch (error) {
-            console.log(error);
+            //console.log(error);
         }
     
     })
