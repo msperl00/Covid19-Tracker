@@ -45,7 +45,7 @@ export default {
         titleContinent.value = 'WORLD DATA';
       } else {
         titleContinent.value = event;
-        console.log(titleContinent.value);
+        //console.log(titleContinent.value);
       }
 
     }

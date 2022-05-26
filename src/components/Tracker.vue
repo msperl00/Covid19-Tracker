@@ -59,7 +59,7 @@ export default {
 
         function getCountries() {
          
-            console.log('GetCountryData', countries);
+            //console.log('GetCountryData', countries);
 
             return countries;
         }
@@ -84,17 +84,17 @@ export default {
                 getStatus();
 
             }
-            console.log('Title: ' + titleConst);
+            //console.log('Title: ' + titleConst);
         }
 
         /* *********************** INIT HOOKS *********************** */
         onMounted(async () => {
 
-            console.log('mounted in the composition api!');
+            //console.log('mounted in the composition api!');
             getWorldData().then(
                 function (response) {
                     worldData = response;
-                    console.log('GetWorldData', worldData);
+                    //console.log('GetWorldData', worldData);
                     stats = worldData;
                     // ! Se quita el spinner cuando se obtenga la response
                     setTimeout(() => {
@@ -102,17 +102,17 @@ export default {
                     }, 1000)
 
                 }, function (err) {
-                    console.log(err);
+                    //console.log(err);
                 });
 
             getCountryFetchData().then(
                 function (response) {
                     countries = response;
-                     console.log('GetCountryData', countries);
+                     //console.log('GetCountryData', countries);
                     // ! Se quita el spinner cuando se obtenga la response
 
                 }, function (err) {
-                    console.log(err);
+                    //console.log(err);
                 }
 
             )

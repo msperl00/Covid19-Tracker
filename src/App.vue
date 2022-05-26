@@ -32,7 +32,7 @@ export default {
     const store = useStore()
     // const {count} = store // NOT REACTIVE 
     const { count } = storeToRefs(store);
-    console.log(count.value);
+    ////console.log(count.value);
     return {count}
   },
   provide() {

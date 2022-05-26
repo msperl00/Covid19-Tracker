@@ -28,6 +28,12 @@
                     class="md:hover:bg-transparent md:border-0  md:hover:border-b md:p-0 dark:text-teal-200  md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                     Help me</a>
             </div>
+             <div class="flex-initial w-60  mx-1  my-1">
+        <!-- WhiteSpace -->
+             </div>
+            <div class="right-0  hidden md:block">
+               <p class="font-medium bg-gradient-to-r shadow from-yellow-400 to-orange-600 hover:from-orange-500 hover:to-orange-900 text-white  px-6 py-3 rounded-md mr-6">Web app under construction!</p>
+            </div>
         </div>
 
 

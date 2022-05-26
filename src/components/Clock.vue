@@ -15,7 +15,7 @@ export default {
       let date = reactive({ count: dateInit })
         const dtFormat = setInterval(() => {
             const dt = DateTime.now();
-            //console.log(dt.toLocaleString());
+            ////console.log(dt.toLocaleString());
             date.count = dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
             return dt;
         }, 1000)
