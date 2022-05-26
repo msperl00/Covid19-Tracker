@@ -3,8 +3,9 @@
     <nav class="w-full text-white shadow relative  bg-gray-700 px-6 h-16 flex border-b ">
         <div class="mr-10 flex items-center">
             <a href="#" class="flex item-center">
-                <router-link to="/">
-                    <img class="h-12" src="../../public/images/Coronavirus/icono-ban.png" alt="bacteria" />
+                <router-link to="/" >
+                    <i class="flex fa-solid fa-3x fa-magnifying-glass-location"></i>
+                    <!-- <i class="flex fa-solid fa-2xl fa-binoculars"></i> -->
                 </router-link>
             </a>
             <p class="text-2xl font-bold whitespace-nowrap dark:text-white tracking-widest ml-5">
@@ -18,14 +19,20 @@
                     aria-current="page">Home</a>
             </div>
             <div class="py-2 pr-4 pl-3 hidden md:block">
-                <a href="/Documentation"
+                <a href="/documentation"
                     class="md:hover:bg-transparent md:border-0  md:hover:border-b md:p-0 dark:text-teal-200  md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                     Documentation</a>
             </div>
             <div class="py-2 pr-4 pl-3 hidden md:block">
-                <a href="/aboutTracker"
+                <a href="/suggestions"
                     class="md:hover:bg-transparent md:border-0  md:hover:border-b md:p-0 dark:text-teal-200  md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                     Help me</a>
+            </div>
+             <div class="flex-initial w-60  mx-1  my-1">
+        <!-- WhiteSpace -->
+             </div>
+            <div class="right-0  hidden md:block">
+               <p class="font-medium bg-gradient-to-r shadow from-yellow-400 to-orange-600 hover:from-orange-500 hover:to-orange-900 text-white  px-6 py-3 rounded-md mr-6">Web app under construction!</p>
             </div>
         </div>
 

@@ -8,17 +8,17 @@ import Form from '../views/Form.vue'
 export const routes = [
   { path: '/', component: Home, meta: { title: 'Home' } },
   {
-    path: '/Documentation',
+    path: '/documentation',
     meta: { title: 'Documentation' },
     component: Documentation,
   },
   {
-    path: '/aboutTracker',
+    path: '/suggestions',
     meta: { title: 'Form' },
     component: Form,
   },
   {
-    path: '/trackerDetails',
+    path: '/tracker',
     meta: { title: 'Global Details' },
     component: GlobalDetails,
   },

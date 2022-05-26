@@ -1,41 +1,53 @@
 <template>
   <div v-if="flag">
-    <div class="bg-gray-600 relative flex flex-row-reverse h-32">
-      <div class="flex-initial flex w-72 mx-1 my-1 flexstart min-w-full sm:min-w-0">
-        <div class="inline-flex">
-          <router-link to="/trackerDetails"
-            class="inline-flex  tracking-wider rounded-md  border border-transparent btn text-base ">
-            Go track</router-link>
-          <ButtonRepo />
-        </div>
-      </div>
-      <div class="flex-initial w-54  mx-1  my-1">
-        <!-- WhiteSpace -->
-      </div>
-      <div class="grow mx-1 my-1 flexstart pl-12 md:flex">
-        <p class="block tracking-wide sm:text-2xl md:text-3xl font-medium lg:text-5xl text-white leading-10 italic uppercase">Ready
-          to
-          track Covid-19</p>
-        <p class="text-7xl font-extrabold text-blue-800 "></p>
-        <button id="PopUp " @click="() => TogglePopup('buttonTrigger')"
+    <div
+    class="bg-gray-600 mx-auto max-w-screen pl-10 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-6 lg:px-8  md:flex md:items-center md:justify-between md:py-6 md:px-8">
+
+    <div class="container flex">
+      <h2 class="text-3xl text-white font-bold pt-5 md:pt-0 leading-9 tracking-wide sm:text-4xl sm:leading-10 pl-12 uppercase">
+      
+        Be ready to  <span class="text-red-500">track covid </span>
+<!--        <i class="  fas fa-question fa-2xl"></i>
+ -->
+      </h2>
+       <button id="PopUp " @click="() => TogglePopup('buttonTrigger')"
           class="lg:block items-center justify-center mx-10 text-3xl text-gray-300 ">
-        <i class="fa fa-notes-medical"></i>       </button>
+          <i class="fa fa-notes-medical"></i> </button>
+      <button @click="toggle">
+      </button>
+    </div><!-- Importante en el responsive este flexstart -->
+    <div id="BackHome" class="mt-8 flex flex-row lg:mt-0 lg:flex-shrink-0 flexstart ">
+      <div class="inline-flex rounded-md md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
+        <router-link to="/tracker"
+          class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn">
+          Go track
+        </router-link>
+
+        <ButtonRepo />
+        
       </div>
     </div>
+  </div>
     <!-- Better rendering with teleport -->
     <Teleport to="body">
       <Popup v-if="popupTriggers.buttonTrigger" :TogglePopup="() => TogglePopup('buttonTrigger')">
-        <p class="text-base text-indigo-600 font-semibold tracking-wide uppercase mb-5 underline underline-offset-2">How to use it</p>
-        <p class="text-lg text-gray-500 text-justify	font-dm">It's almost 2022 and we still don't know if there is
-          aliens living among us, or
-          do we? Maybe the person writing this is an alien, or a software developer lack of imagination.
-          I used to say that became an engineer because of my lack of imagination. Meanwhile, I honestly tought about
-          something that we call <code
-            class=" font-dm bg-indigo-100 px-1 py-0.5 rounded text-indigo-900">"lack of future"</code>
-          and that was
-          at least the most terrible word that I listen. I just couldn't find the answers that matched what I thought
-          they should be. But someone would break it. So I just open my computer and using two fingers began typing out,
-          what I thought were my TFG.
+        <p class="font-normal text-indigo-500  tracking-wide uppercase mb-5 underline underline-offset-2">How to use it
+        </p>
+        <p class="text-lg text-gray-500 text-justify font-light">
+          1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+        </p>
+        <p class="text-lg text-gray-500 text-justify font-light">
+          2. Sed nec sapien id purus mattis ornare.
+          Proin vitae nisl at elit finibus pharetra.
+        </p>
+        <p class="text-lg text-gray-500 text-justify font-light">
+          3. Vestibulum vestibulum mi a dolor sollicitudin, ac molestie nibh consectetur.
+
+        </p>
+        <p class="text-lg text-gray-500 text-justify font-light">
+          4. Nunc placerat nulla a interdum accumsan.
+          Suspendisse sed ex in nisl maximus rutrum in vitae ipsum.
         </p>
       </Popup>
     </Teleport>
@@ -56,12 +68,12 @@
             {{ title }}
           </h2>
           <div class="relative flexstart">
-                      <span class=" font-bold uppercase tracking-widest italic mx-10">{{ titleContinent }}</span>
-                      <img :src="this.url" :alt="this.title" class="relative w-auto h-10   shadow-white ">
+            <span class=" font-bold uppercase tracking-widest italic mx-10">{{ titleContinent }}</span>
+            <img :src="this.url" :alt="this.title" class="relative w-auto h-10   shadow-white ">
           </div>
           <!--  <Clock /> -->
         </div>
-        
+
       </div>
     </div>
   </div>
@@ -87,7 +99,6 @@ export default {
   },
   setup() {
     const home = true;
-    let url = ref('as');
     const popupTriggers = ref({
       buttonTrigger: false,
       timedTrigger: false

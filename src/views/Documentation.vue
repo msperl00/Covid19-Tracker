@@ -16,12 +16,12 @@
       </button>
     </div>
     <div id="BackHome" class="mt-8 flex flex-row lg:mt-0 lg:flex-shrink-0 flexstart">
-      <div class="inline-flex rounded-md shadow md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
+      <div class="inline-flex rounded-md md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
         <router-link to="/"
           class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn">
           Back Home</router-link>
+           <ButtonRepo />
       </div>
-      <ButtonRepo />
     </div>
   </div>
 
@@ -36,14 +36,19 @@
         <p class="text-lg text-gray-500 text-justify	font-dm">It's almost 2022 and we still don't know if there is
           aliens living among us, or
           do we? Maybe the person writing this is an alien, or a software developer lack of imagination.
-          I used to say that became an engineer because of my lack of imagination. Meanwhile, I honestly tought about
+          I used to say that I became an engineer because of my lack of imagination...
+          I'm kidding!
+        </p>
+        <p class="text-lg text-gray-500 text-justify	font-dm mt-5">
+          Meanwhile, I honestly tought about
           something that we call <code
             class=" font-dm bg-indigo-100 px-1 py-0.5 rounded text-indigo-900">"lack of future"</code>
           and that was
-          at least the most terrible word that I listen. I just couldn't find the answers that matched what I thought
-          they should be. But someone would break it. So I just open my computer and using two fingers began typing out,
-          what I thought were my TFG.
+          at least the most terrible word that I listen.
         </p>
+        <p class="text-lg text-gray-500 text-justify	font-dm mt-5">I just couldn't find the answers that matched what I thought
+          I should be. But something would break it. So I just open my computer and using two fingers, I began typing out,
+          what I thought were my TFG.</p>
       </div>
       <div class="mt-16 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start font-dm">
         <div class="max-w-5xl">
@@ -54,7 +59,7 @@
               Well, here we are 5 year leater, and I am still sayin the same things that I said a long time ago, maybe in a different galaxy, far, far away...
               My investment in my own education is going to be one of my greatest legacies in the future, always self-develop .But this requires workhard. So,
               <code class="bg-indigo-100 px-1 py-0.5 rounded text-indigo-900 italic">this is not a project</code> 
-              its something that the world we live in. Enjoying the project!
+              its a stage of my life that I am closing. Enjoy it!
             </p>
           </div>
         </div>
@@ -62,21 +67,26 @@
              <blockquote class="relative bg-gray-100 rounded-lg shadow-lg">
           <div class="rounded-t-lg px-6 py-8 sm:px-10 sm:pt-10 sm:pb-8">
             <div class="flexstart justify-start  ">
-               <img src="public/images/Coronavirus/conona-alert-white.png" alt="Work" class="h-12 mr-5" />
+               <img src="/public/images/Coronavirus/conona-alert-white.png" alt="Work" class="h-12 mr-5" />
                 <p class="text-xl font-lora text-indigo-600 font-bold tracking-wider uppercase"> 
              Covid Tracker
+             <i class="fa-brands fa-vuejs mr-3  mb-3"></i>
             </p>
             </div>
           
             <div class="relative text-lg text-gray-700 font-medium mt-8">
-              <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+              <svg class="absolute  top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
                 <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
               </svg>
-              <p class="relative font-lora">
-                I really enjoy developing this web app, which can be used to verify data and contents about how the pandemy change our life.
+              <div class="container ml-3 text-justify">
+                <p class="font-light">
+                I really be happy develop this web app, which can be used to verify data and contents about how the pandemy change our life
                 <code class="bg-indigo-100 px-1 py-0.5 rounded text-red-600">Covid-19</code> 
-                Unfortunately, the world has to live with that forever.
               </p>
+              <p class="flex font-light">
+                 Unfortunately, the world must live with that forever.
+              </p>
+              </div>
             </div>
           </div>
           <cite class="relative flex items-center sm:items-start bg-indigo-600  rounded-b-lg not-italic py-5 px-6 sm:py-5 sm:pl-12 sm:pr-10 sm:mt-10">
