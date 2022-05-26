@@ -19,7 +19,7 @@ export default {
   name: 'GlobalDetails',
   components: { Tracker, Clock, Sidebar, NavRoutes },
   setup() {
-    let url = ref('public/images/Coronavirus/mapamundi.png');
+    let url = ref('/public/images/Coronavirus/mapamundi.png');
     let title = ref('Global details');
     let titleContinent = ref('WORLD DATA');
 

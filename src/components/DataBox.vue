@@ -233,8 +233,8 @@ export default {
         function getImage() {
             //console.log(props.stats.countryInfo);
             if (props.stats.countryInfo == undefined) {
-                url.value = 'public/images/Coronavirus/mapamundi.png';
-                return 'public/images/Coronavirus/mapamundi.png';
+                url.value = '/public/images/Coronavirus/mapamundi.png';
+                return '/public/images/Coronavirus/mapamundi.png';
             }
             url.value = props.stats.countryInfo.flag;
             return props.stats.countryInfo.flag;
