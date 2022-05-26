@@ -18,6 +18,9 @@ module.exports = {
         "screen/4": "calc(100vh / 4)",
         "screen/5": "calc(100vh / 5)",
       }),
+      left: them => ({
+        "left-2/5": "40%"
+      }),
       container: { 
         center: true, 
         padding: '1rem',

@@ -16,12 +16,12 @@
       </button>
     </div>
     <div id="BackHome" class="mt-8 flex flex-row lg:mt-0 lg:flex-shrink-0 flexstart">
-      <div class="inline-flex rounded-md shadow md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
+      <div class="inline-flex rounded-md md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
         <router-link to="/"
           class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn">
           Back Home</router-link>
+           <ButtonRepo />
       </div>
-      <ButtonRepo />
     </div>
   </div>
 
@@ -65,6 +65,7 @@
                <img src="public/images/Coronavirus/conona-alert-white.png" alt="Work" class="h-12 mr-5" />
                 <p class="text-xl font-lora text-indigo-600 font-bold tracking-wider uppercase"> 
              Covid Tracker
+             <i class="fa-brands fa-vuejs mr-3  mb-3"></i>
             </p>
             </div>
           
@@ -75,7 +76,7 @@
               <p class="relative font-lora">
                 I really enjoy developing this web app, which can be used to verify data and contents about how the pandemy change our life.
                 <code class="bg-indigo-100 px-1 py-0.5 rounded text-red-600">Covid-19</code> 
-                Unfortunately, the world has to live with that forever.
+                Unfortunately, the world must live with that forever.
               </p>
             </div>
           </div>
