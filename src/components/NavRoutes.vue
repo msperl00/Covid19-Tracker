@@ -99,7 +99,6 @@ export default {
   },
   setup() {
     const home = true;
-    let url = ref('as');
     const popupTriggers = ref({
       buttonTrigger: false,
       timedTrigger: false

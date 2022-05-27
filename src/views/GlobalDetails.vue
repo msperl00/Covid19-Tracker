@@ -1,5 +1,5 @@
 <template>
-  <NavRoutes :title="this.title" :titleContinent="this.titleContinent" :url="this.url" />
+  <NavRoutes :title="title" :titleContinent="titleContinent" :url="url" />
   <div class="flex flex-col">
     <div class='flex flex-grow'>
       <Tracker @customChange="log" @customChangeContinent="logContinente" />
@@ -19,7 +19,8 @@ export default {
   name: 'GlobalDetails',
   components: { Tracker, Clock, Sidebar, NavRoutes },
   setup() {
-    let url = ref('/public/images/Coronavirus/mapamundi.png');
+    /*  let url = ref('/images/Coronavirus/mapamundi.png'); */
+    let url = ref('/images/Coronavirus/mapamundi.png');
     let title = ref('Global details');
     let titleContinent = ref('WORLD DATA');
 
