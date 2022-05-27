@@ -34,10 +34,10 @@
                             <div class="form-group mb-6">
                                 <input type="text" name="_honey" style="display:none">
                                 <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="https://https://virus-covid19tracker.netlify.app/suggestions">
                                 <!-- Only with recaptcha -->
                               <!--   <input type="hidden" name="_autoresponse" value="your custom message">  -->
                                 <input type="hidden" name="_subject" value="COVIDTRACKER SUGGESTIONS-TIPS">
-                                 
                                   <input type="hidden" name="_template" value="table">
                               <!--   <p class="font-light pb-4" v-if="errors.length">
                                     <b>Por favor, corrija el(los) siguiente(s) error(es):</b>
