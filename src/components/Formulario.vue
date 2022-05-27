@@ -29,17 +29,16 @@
                 <div class="flexstart">
                     <div class=" p-6 rounded-lg shadow-lg bg-white w-full">
                         <!-- Random String from covidTracker -->
-                        <form @submit="checkForm"  action="https://formsubmit.co/de7a638ad429ee242caaccf430838086"
-                            method="post">
+                        <form method="post" @submit="onSubmit" @submit.prevent>
                             <div class="form-group mb-6">
                                 <input type="text" name="_honey" style="display:none">
                                 <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_next" value="https://https://virus-covid19tracker.netlify.app/suggestions">
+                                <!--<input type="hidden" name="_next" value="https://virus-covid19tracker.netlify.app/suggestions">-->
                                 <!-- Only with recaptcha -->
-                              <!--   <input type="hidden" name="_autoresponse" value="your custom message">  -->
-                                <input type="hidden" name="_subject" value="COVIDTRACKER SUGGESTIONS-TIPS">
-                                  <input type="hidden" name="_template" value="table">
-                              <!--   <p class="font-light pb-4" v-if="errors.length">
+                                <!--   <input type="hidden" name="_autoresponse" value="your custom message">  -->
+                                <!-- <input type="hidden" name="_subject" value="COVIDTRACKER SUGGESTIONS-TIPS"> -->
+                                <!--<input type="hidden" name="_template" value="table">-->                                
+                                <!--   <p class="font-light pb-4" v-if="errors.length">
                                     <b>Por favor, corrija el(los) siguiente(s) error(es):</b>
                                 <ul>
                                     <li class="text-red-600" v-for="error in errors">{{ error }}</li>
@@ -59,7 +58,8 @@
                                     <tbody>
                                         <tr>
                                             <td class="">Rate my web</td>
-                                            <td><input type="radio" value="Amazing" name="web" v-model="vote" required /></td>
+                                            <td><input type="radio" value="Amazing" name="web" v-model="vote"
+                                                    required /></td>
                                             <td><input type="radio" value="Good" name="web" v-model="vote" /></td>
                                             <td><input type="radio" value="Decent" name="web" v-model="vote" /></td>
                                             <td><input type="radio" value="Disappointing" name="web" v-model="vote" />
@@ -100,8 +100,7 @@
                                         project (Aprox.)</span>
                                     <select
                                         class="form-select mt-1 block w-full font-light text-gray-600 border border-solid border-gray-300"
-                                        name="hours"
-                                        v-model="hours" required>
+                                        name="hours" v-model="hours" required>
                                         <option value="0" selected disabled hidden>Choose here</option>
                                         <option value="<100">less than 100</option>
                                         <option value="100-250"> between 100 and 250</option>
@@ -113,17 +112,16 @@
                             <div class="form-group mb-6">
                                 <span class="text-black text-lg font-light">Just to have the possibility to contact you
                                 </span>
-                                <input type="email"
-                                    name="email"
+                                <input type="email" name="email"
                                     class="form-control block w-full px-3 py-1.5 font-light text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300       rounded    transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                     placeholder="Email address (Not required) " v-model="email" required>
                             </div>
                             <div class="form-group mb-6">
                                 <span class="text-black text-lg font-light">How would you suggest I improve it?</span>
-                                <textarea v-model="message"
-                                    name="message"
+                                <textarea v-model="message" name="message"
                                     class="  form-control block  w-full  px-3   py-1.5   font-light   text-gray-700    bg-white bg-clip-padding   border border-solid border-gray-300   rounded transitionease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                    id="exampleFormControlTextarea13" rows="3" placeholder="Message " required></textarea>
+                                    id="exampleFormControlTextarea13" rows="3" placeholder="Message "
+                                    required></textarea>
                             </div>
                             <div class="form-group form-check text-center mb-6">
                                 <input type="checkbox"
@@ -174,9 +172,9 @@ export default {
         function checkForm(e) {
             if (this.vote && this.email && this.identity && this.hours && this.message) {
                 //console.log('Well done!!!');
-                 this.post.push(this.vote, this.identity, this.hours, this.email, this.massage );
-                 console.warn(this.post);
-                 this.errors = [];
+                this.post.push(this.vote, this.identity, this.hours, this.email, this.massage);
+                console.warn(this.post);
+                this.errors = [];
                 return true;
             }
 
@@ -200,7 +198,7 @@ export default {
                 this.errors.push('Maybe a little massage?');
             }
 
-            
+
 
         }
 
@@ -208,11 +206,32 @@ export default {
             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
         }
-        function sendPrevent() {
-            //console.log('In send prevent');
+
+        function onSubmit() {
+            console.log('In send prevent');
+            /*  todo validate email + errors + message success */
+            fetch("https://formsubmit.co/ajax/de7a638ad429ee242caaccf430838086", {
+                method: "POST", 
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    vote: this.vote,
+                    identity: this.identity, 
+                    hours: this.hours,
+                    email: this.email,
+                    message: this.message,
+                    _template: 'table',
+                    _subject: 'COVIDTRACKER SUGGESTIONS-TIPS'
+                })
+            })
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.log(error));
         }
 
-        return { errors, vote, email, identity, hours, message, checkForm, sendPrevent, validEmail, post }
+        return { errors, vote, email, identity, hours, message, checkForm, validEmail, post, onSubmit }
     }
 
 }
