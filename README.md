@@ -1,12 +1,12 @@
 
 
 
- # Covid-19-Tracker
+ # Aplicación web/móvil para la geolocalización y análisis de la violencia de genero y doméstica.
 
 ## TFG - Universidad de Léon
 
 ## Description
-Covid Tracker using a template from msperl00 Vue3-Pinia-Router-Tailwind.
+Template from msperl00 Vue3-Pinia-Router-Tailwind.
 Web app under construction...
 
 ## Steps completed
@@ -38,6 +38,9 @@ ex. msperl00
 ex. Marco Speranza López
 ## Version History
 
+
+*2.0
+    * Change data
 * 1.0
     * World Data Analitics
     * Rate the project
